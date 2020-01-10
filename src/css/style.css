@@ -67,7 +67,7 @@ body {
 }
 
 @media screen and (max-width:768px) {
-    .none-768 {
+    .hidden {
         display: none!important
     }
 }
