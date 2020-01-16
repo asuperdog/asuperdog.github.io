@@ -9,7 +9,7 @@
     letter-spacing: 1px
 }
 
-.main>img {
+.main > img {
     width: 90px;
     border-radius: 100%;
     display: inline-block;
@@ -66,8 +66,8 @@ body {
     margin: 0
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .hidden {
-        display: none!important
+        display: none !important
     }
 }
