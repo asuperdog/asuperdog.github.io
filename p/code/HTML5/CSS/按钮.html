@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮</title>
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+        H1{
+            color: red;
+        }
+        .demo{
+            width: 340px;
+            height: 30px;
+            border: 1px #ccc solid;
+            padding: 10px;     /* 内边距 */
+            margin: 0px auto;  /* 横向居中 */
+            border-radius: 10px;
+        }
+        .demo li:nth-child(2n){
+            border: 1px #ccc solid;
+            padding: 4px;
+            float: left;           /* 靠左浮动 */
+            display: block;        /* 设置元素显示方式 */
+            margin-right: 2px;     /* 右外边距 */
+            list-style-type: none; /* 不显示列表符 */
+            background: lightgreen;
+            /* border-radius: 5px; */
+        }
+        .demo li:nth-child(2n-1){
+            border: 1px #ccc solid;
+            padding: 4px;
+            float: left;           /* 靠左浮动 */
+            display: block;        /* 设置元素显示方式 */
+            margin-right: 2px;     /* 右外边距 */
+            list-style-type: none; /* 不显示列表符 */
+            background: skyblue;
+            /* border-radius: 5px; */
+        }
+        .demo a{
+            width: 22px;
+            height: 22px;
+            float: left;
+            display: block;
+            border-radius: 11px;
+            font-weight: bold;
+            color: slateblue;
+            background: hotpink;
+            text-decoration: none;
+
+        }
+        /* LoVe & HAte */
+        .demo a:link{color: white}     /* 链接没有被访问时 */
+        .demo a:visited{color: yellow}  /* 链接被访问过后 */
+        .demo a:hover{color:lawngreen}     /* 鼠标悬浮在链接时 */
+        .demo a:active{color: silver}    /* 鼠标点击链接时 */
+
+        .btn{
+        outline: none;
+        color: white;
+        background: #ff99cc;
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        transition: color 1s;
+        -webkit-transition: color 1s;
+        }
+        .btn:hover{
+        color: black;
+        background: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>今日特码：</h1>
+    <p>昨晚出【40：猴】你把握住了吗？+小雅 · 微：wuli592 给您提供明晚今期的三个号参考，准不准您试了就知道！</p>
+    <div>
+        <ul class="demo">
+            <li><a href="#1">1</a></li>
+            <li><a href="#2">2</a></li>
+            <li><a href="#3">3</a></li>
+            <li><a href="#4">4</a></li>
+            <li><a href="#5">5</a></li>
+            <li><a href="#6">6</a></li>
+            <li><a href="#7">7</a></li>
+            <li><a href="#8">8</a></li>
+            <li><a href="#9">9</a></li>
+            <li><a href="#0">0</a></li>
+        </ul><br>
+        <input class="btn" type="button" value="提交">
+    </div>
+</body>
+</html>

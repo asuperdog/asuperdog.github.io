@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录框</title>
+    <style type="text/css">
+        body{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .login{
+            width: 400px;
+            height: 150px;
+            border-radius: 20px;
+            background-color: #66cccc;
+            margin: 0px auto;
+            text-align: center;
+        }
+        .accfield{
+            height: 50px;
+        }
+        .pwdfield{
+            height: 50px;
+            background-color: #ccff66;
+        }
+        .inputbox{
+            width: 180px;
+            height: 22px;
+            margin: 12px auto;
+            border: 1px silver solid;
+            outline: none;
+            transition: background-color 500ms;
+            -webkit-transition: background-color 500ms;
+        }
+        .inputbox:hover{
+            background: #ffcc99;
+        }
+        .inputbox:focus{
+            background: #ccffff;
+        }
+        .btnfield{
+            margin: 10px auto;
+        }
+        .btn{
+            outline: none;
+            color: white;
+            background: #ff99cc;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px;
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            transition: color 1s;
+            -webkit-transition: color 1s;
+        }
+        .btn:hover{
+            color: black;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST">
+        <div class="login">
+            <div class="accfield">
+                <label>账号：</label>
+                <input class="inputbox" type="text"><br><br>
+            </div>
+            <div class="pwdfield">
+                <label>密码：</label>
+                <input class="inputbox" type="password"><br><br>
+            </div>
+            <div class="btnfield">
+                <input type="submit" class="btn" value="登  录">&emsp;
+                <input type="reset"  class="btn" value="取  消">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

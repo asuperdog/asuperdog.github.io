@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索框</title>
+        <style type="text/css">
+            body{
+                text-align: center;
+            }
+            form{
+                width: 260px;
+                height: 47px;
+                margin: 0px auto;
+                border:5px silver solid;
+                border-radius: 0em;
+                border-width: 1px 1px;
+                background-color: white;
+            }
+            .box{
+                margin: 7px;
+                width: 200px;
+                height: 30px;
+                outline: none;
+                font-size: 15px;
+                text-align: center;
+                text-shadow: 2px 2px 5px #888888;
+                /* box-shadow: 1px 1px 4px #888888; */
+                border:5px silver solid;
+                border-width: 0.5px 0.5px;
+                border-radius: 2em;
+                background-color: white;
+            }
+            .btn{
+                width: 32px;
+                height: 32px;
+                outline: none;
+                color: white;
+                cursor: pointer;
+                font-size: 15px;
+                border-width: 0px 0px;
+                border-radius: 16px;
+                box-shadow: 1px 2px 4px silver;
+                background-color: #3285ff;
+            }
+            .btn:hover{
+                border:5px silver solid;
+                border-width: 1px 1px;
+            }
+        </style>
+</head>
+<body>
+    <h2>我是百度的爸爸</h2>
+    <p>我叫度爹，您想知道些什么呢?</p>
+    <hr><br>
+        <form>
+            <input class="box" type="text" name="content" placeholder="Search..." autofocus>
+            <input class="btn" type="submit" value="Go">
+        </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        label{
+            float: left;
+            width: 45%;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .btn{
+            display:block;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form>   
+        <label>Title:              </label><input type="text" list="list" name="title" autofocus>
+            <datalist id="list">
+                <option label="Miss" value="Ms"></option>
+                <option label="Mister" value="Mr"></option>
+                <option label="Mistress" value="Mrs"></option>
+            </datalist><br><br>
+        <label>Name:               </label><input type="text" name="name" required><br><br>
+        <label>Phone number:       </label><input pattern="[1]{1}[0-9]{10}" name="phone" minlength="11" maxlength="11"> (optional)<br><br>
+        <label>E-mail:             </label><input type="email" name="email" required placeholder="your@email.com"><br><br>
+        <label>Your website:       </label><input type="url" name="website" placeholder="www.yoursite.com"> (optional)<br><br>
+        <label>Nr. of items:       </label><input type="number" name="number" value="2" min="1" max="10" step="1"> (1-10)<br><br>
+        <label>Length:             </label><input type="range" name="length" min="0" max="100" value="0" step="5"><br><br>
+        <label>Delivery date:      </label><input type="date" name="date" value="2019-11-11"><br><br>
+        <label>Time of delivery:   </label><input type="time" name="time"> (in 30min increments)<br><br>
+        <label>Color of the items: </label><input type="color" value="#ff0000"> (default red)<br><br>
+        <input class="btn" type="submit" name="submit" value="提交">
+    </form>
+</body>
+</html>

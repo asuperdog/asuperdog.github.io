@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <style type="text/css">
+        #clock{
+            width: 250px;
+            border: 10px lightcoral solid;
+            border-radius: 1em;
+            font-size: 50px;
+            text-align: center;
+            color: lightseagreen;
+            font-weight: bold;
+            background: lightpink;
+            text-shadow: 5px 6px 7px gray;
+            box-shadow: 6px 8px 10px darkorange inset;
+        }
+    </style>
+    <script>
+        function startTime(params) {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            document.getElementById("text").innerText = h + ":" + m + ":" + s
+            t = setTimeout("startTime()",500) 
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    <!-- <h1>当前时间为：</h1> -->
+    <div id="clock">
+        <div id="text">
+        </div>
+    </div>
+</body>
+</html>

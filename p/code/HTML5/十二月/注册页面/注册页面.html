@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+    <style type="text/css">
+        body{
+            margin: 30px;
+            background-image: url(images/bgpic.png);
+            background-repeat: no-repeat;
+            background-position: 90% 15%;
+        }
+        label{
+            color: green;
+        }
+        .note{
+            color: grey;
+            font-size: 13px;
+            font-family: "Microsoft YaHei";
+        }
+        .star{
+            color: red;
+            font-family: "Microsoft YaHei";
+        }
+        .box{
+            outline: none;
+            border: 1px silver solid;
+            transition: border-color 500ms;
+            -webkit-transition: border-color 500ms;
+        }
+        .box:hover{
+            border: 2px darkviolet solid;
+        }
+        .btn{
+            margin: 6px;
+            width: 155px;
+            height: 30px;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            border: none;
+            border-radius: 1em;
+            background-image: url(images/button.png);
+            background-repeat: no-repeat;
+            background-position: 15%;
+            background-size: 25px 25px;
+            background-color: lightsalmon;
+        }
+        .btn:hover{
+            background-image: url(images/hover.png);
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <form name="register">
+        <h3>填写用户信息</h3>
+        <label>用户名：</label><br>
+        <input class="box" type="text" name="username" size="22" required autofocus><span class="star">*</span><br>
+        <div class="note">用户名可用中英文</div><br>
+
+        <label>密码：</label><br>
+        <input class="box" type="password" name="password" size="22" minlength="6" maxlength="10" required><span class="star">*</span><br>
+        <div class="note">密码为6~10个字符</div><br>
+
+        <label>确认密码：</label><br>
+        <input class="box" type="password" name="password" size="22" minlength="6" maxlength="10" required><span class="star">*</span><br>
+        <div class="note">请重复输入一次密码</div><br>
+
+        <label>手机号：</label><br>
+        <input class="box" pattern="[1]{1}[0-9]{10}" name="phone" size="22" maxlength="11"><br>
+        <div class="note">请输入11位手机号码</div><br>
+
+        <label>电子邮箱：</label><br>
+        <input class="box" type="email" name="email" size="22" maxlength="20"><br>
+        <div class="note">请输入正确的电子邮箱</div><br>
+
+        <label>所在地区：</label><br>中国
+        <select name="province">
+            <option value="guangeast" selected="selected">广东</option>
+            <option value="guangwest">广西</option>
+        <select>省
+        <select name="city">
+            <option value="shenzhen" selected="selected">深圳</option>
+            <option value="zhaoqing">肇庆</option>
+        </select>市<br>
+        <div class="note">请选择您目前的所在地</div><br>
+
+        <input type="checkbox">本人已阅读注册协议</a><br>
+        <input class="btn" type="submit" value="确认注册"><br>
+    </form>
+
+</body>
+</html>
