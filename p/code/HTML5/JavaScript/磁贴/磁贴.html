@@ -6,34 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>磁贴</title>
     <style>
-    #cover{
-        width:600px;
-        height:338px;
-        position:absolute;
-        left:100px;
-        top:50px;
-        overflow:hidden;
-    }
-    #picf{
-        margin:0px 0px;
-        transition:margin 1s;
-        -webkit-transition:margin 1s;
-    }
-    #text{
-        width: 600px;
-        height: 338px;
-        background: red;
-        margin:0px 0px;
-        transition:margin 1s;
-        -webkit-transition:margin 1s;
-    }
+        #cover{
+            width:600px;
+            height:338px;
+            position:absolute;
+            left:100px;
+            top:50px;
+            overflow:hidden;
+        }
+
+        #picf{
+            margin:0px 0px;
+            transition:margin 1s;
+            -webkit-transition:margin 1s;
+        }
     </style>
     <script>
         var times=1;
         function liveTitle()
         {
             var u=document.getElementById("imglist");
-            switch(times){
+            switch(times) {
                 case 0:
                     u.style.margin="0px -1200px";
                     times=1;
@@ -54,12 +47,11 @@
 <body onload="liveTitle()">
     <div id="cover">
         <div id="imglist">
-            <a id="addo" href="" target="_blank">
-                <img id="picf" src="images/111.gif" ></a>
-            <a id="addt" href="" target="_blank">
-                <img id="pics" src="images/222.gif"></a>
+            <a id="addo" href="#">
+                <img id="picf" src="img/01.gif"></a>
+            <a id="addt" href="#">
+                <img id="pics" src="img/02.gif"></a>
         </div>
-        <div id="text"></div>
     </div>   
 </body>
 </html>
