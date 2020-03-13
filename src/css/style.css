@@ -16,7 +16,7 @@
     height: 90px
 }
 
-.name {
+.head {
     font-size: 14px;
     margin: 15px 15px 23px
 }
@@ -36,15 +36,6 @@ a {
 
 .about p {
     margin-top: 15px
-}
-
-@keyframes rot {
-    form {
-        transform: rotate(0deg)
-    }
-    to {
-        transform: rotate(1turn)
-    }
 }
 
 p {
