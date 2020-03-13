@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../../src/img/favicon.png" type="image/x-icon">
     <title>关于渣狗</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
         p, ul {
             color: #333;
@@ -13,6 +14,7 @@
             word-wrap: break-word;
             letter-spacing: 0.013rem;
         }
+
 
         #about {
             width: 750px;
@@ -49,7 +51,37 @@
     </style>
 </head>
 <body>
-    <div id="container">
+    <!-- <div id="container"> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../../">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../blog">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../code">Code</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../space">Space</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="../about">About</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        
+    <div class="main">
+        <blockquote class="blockquote">
+            
+        </blockquote>
         <div id="about">
             <p style="font-size: 1.2em; color: #26cb7c;">关于渣狗</h1>
                 <p>渣狗，这个网名来源于我的两个昵称。高中时期被朋友们称作渣渣，后来又被一些大学朋友叫我作狗狗。结果脑子它抖了一下机灵，把这两个昵称结合了起来，于是就诞生了“渣狗”这个名字。</p>
@@ -76,5 +108,8 @@
                 <p>Copyright &copy; 2020 渣狗啊喂</p>
         </div>
     </div>
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
