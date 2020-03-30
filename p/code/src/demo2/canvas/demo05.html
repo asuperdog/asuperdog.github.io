@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>demo05</title>
+</head>
+<body>
+<canvas id="myCanvas" width="450" height="250"></canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 7;
+    ctx.strokeStyle = "#0081C9";
+    ctx.beginPath();
+    ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.strokeStyle = "#231F20";
+    ctx.beginPath();
+    ctx.arc(220, 100, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.strokeStyle = "#ED1941";
+    ctx.beginPath();
+    ctx.arc(340, 100, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.strokeStyle = "#FCB131";
+    ctx.beginPath();
+    ctx.arc(160, 150, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.strokeStyle = "#00A651";
+    ctx.beginPath();
+    ctx.arc(280, 150, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+</script>
+</body>
+</html>

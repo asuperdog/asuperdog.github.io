@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>demo06</title>
+</head>
+<body>
+<canvas id="myCanvas" width="700" height="250"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext('2d');
+    for (var i = 0; i < 9; i++) {
+        ctx.save();
+        ctx.translate(60 * i, 0);
+
+        ctx.fillStyle = "rgb(" + (30 * i) + "," + (255 - 30 * i) + ",255)";
+        ctx.beginPath();
+        ctx.arc(100, 100, 30, 0, Math.PI, true);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(100, 100, 1.5, 45);
+
+        ctx.strokeStyle = "blue";
+        ctx.beginPath();
+        ctx.arc(96, 145, 5, 0, Math.PI);
+        ctx.stroke();
+        ctx.restore();
+    }
+</script>
+</body>
+</html>

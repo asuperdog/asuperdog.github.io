@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>刮刮乐 - 概率版</title>
+    <style>
+        #div {
+            height: 250px;
+            width: 250px;
+            background: url("img/no.png");
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    <canvas id="a" width="250px" height="250px"></canvas>
+</div>
+<p>说明：<br>特等奖: 2%<br>一等奖: 8%<br>二等奖: 20%<br>三等奖: 30%<br>没有奖: 40%<br></p>
+<script>
+    var canvas = document.getElementById("a");
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = "grey";
+    ctx.fillRect(0, 0, 250, 250);
+
+    var bg = document.getElementById("div");
+    const num = Math.random() * 100;
+    if (num < 2) {
+        bg.style.background = "url(img/0.png)"
+    } else if (num >= 2 && num < 10) {
+        bg.style.background = "url(img/1.png)"
+    } else if (num >= 10 && num < 30) {
+        bg.style.background = "url(img/2.png)"
+    } else if (num >= 30 && num < 60) {
+        bg.style.background = "url(img/3.png)"
+    } else {
+        bg.style.background = "url(img/no.png)"
+    }
+
+    // 鼠标按下及移动事件
+    canvas.onmousedown = function () {
+        canvas.onmousemove = function (event) {
+            event = event || window.event;
+            var x = event.clientX;
+            var y = event.clientY;
+            ctx.globalCompositeOperation = "destination-out";
+            ctx.beginPath();
+            ctx.arc(x, y, 20, 0, 2 * Math.PI);
+            ctx.closePath();
+            ctx.fill();
+        };
+        canvas.onmouseup = function () {
+            canvas.onmousemove = null;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+#container {
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 1px solid silver;
+}
+
+ul {
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+ul li {
+    float: left;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    border: 1px solid hotpink;
+    border-radius: 50%;
+    cursor: pointer;
+    list-style-type: none;
+    background-color: hotpink;
+    font-weight: bold;
+    color: white;
+}

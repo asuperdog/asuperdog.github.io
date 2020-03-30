@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>demo07</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<br>
+<input id="btn" type="button" value="点击旋转" style="margin-left: 170px"/>
+<input id="btn2" type="button" value="点击停止" style="margin-left: 20px"/>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext('2d');
+    var start = document.getElementById("btn");
+    var stop = document.getElementById("btn2");
+    var time;
+    ctx.translate(250, 250);
+    start.onclick = function () {
+        myRotate();
+        function myRotate() {
+            ctx.clearRect(-250, -250, 500, 500);
+            ctx.rotate(5 * Math.PI / 180);
+            for (var i = 0; i < 8; i++) {
+                ctx.save();
+                ctx.rotate(i * 45 * Math.PI / 180);
+                ctx.fillStyle = "rgb(" + (30 * i) + "," + (255 - 30 * i) + ",255)";
+                ctx.beginPath();
+                ctx.arc(0, 100, 30, 0, Math.PI);
+                ctx.closePath();
+                ctx.fill();
+                ctx.fillStyle = "blue";
+                ctx.fillRect(0, 55, 1.5, 45);
+                ctx.strokeStyle = "blue";
+                ctx.beginPath();
+                ctx.arc(6, 55, 5, Math.PI, 0);
+                ctx.stroke();
+                ctx.restore();
+            }
+            time = setTimeout(myRotate, 100);
+        }
+    }
+
+    stop.onclick = function () {
+        clearTimeout(time);
+    }
+
+    for (var i = 0; i < 8; i++) {
+        ctx.save();
+        ctx.rotate(i * 45 * Math.PI / 180);
+        ctx.fillStyle = "rgb(" + (30 * i) + "," + (255 - 30 * i) + ",255)";
+        ctx.beginPath();
+        ctx.arc(0, 100, 30, 0, Math.PI);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 55, 1.5, 45);
+        ctx.strokeStyle = "blue";
+        ctx.beginPath();
+        ctx.arc(6, 55, 5, Math.PI, 0);
+        ctx.stroke();
+        ctx.restore();
+    }
+</script>
+</body>
+</html>
