@@ -6,34 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册页面</title>
     <style type="text/css">
-        body{
+        body {
             margin: 30px;
-            background-image: url(images/bgpic.png);
+            background-image: url(img/bgpic.png);
             background-repeat: no-repeat;
             background-position: 90% 15%;
         }
-        label{
+
+        label {
             color: green;
         }
-        .note{
+
+        .note {
             color: grey;
             font-size: 13px;
             font-family: "Microsoft YaHei";
         }
-        .star{
+
+        .star {
             color: red;
             font-family: "Microsoft YaHei";
         }
-        .box{
+
+        .box {
             outline: none;
             border: 1px silver solid;
             transition: border-color 500ms;
             -webkit-transition: border-color 500ms;
         }
-        .box:hover{
+
+        .box:hover {
             border: 2px darkviolet solid;
         }
-        .btn{
+
+        .btn {
             margin: 6px;
             width: 155px;
             height: 30px;
@@ -49,7 +55,8 @@
             background-size: 25px 25px;
             background-color: lightsalmon;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-image: url(images/hover.png);
             background-color: darkorange;
         }
@@ -63,11 +70,13 @@
         <div class="note">用户名可用中英文</div><br>
 
         <label>密码：</label><br>
-        <input class="box" type="password" name="password" size="22" minlength="6" maxlength="10" required><span class="star">*</span><br>
+        <input class="box" type="password" name="password" size="22" minlength="6" maxlength="10" required><span
+            class="star">*</span><br>
         <div class="note">密码为6~10个字符</div><br>
 
         <label>确认密码：</label><br>
-        <input class="box" type="password" name="password" size="22" minlength="6" maxlength="10" required><span class="star">*</span><br>
+        <input class="box" type="password" name="password" size="22" minlength="6" maxlength="10" required><span
+            class="star">*</span><br>
         <div class="note">请重复输入一次密码</div><br>
 
         <label>手机号：</label><br>
@@ -82,16 +91,15 @@
         <select name="province">
             <option value="guangeast" selected="selected">广东</option>
             <option value="guangwest">广西</option>
-        <select>省
-        <select name="city">
-            <option value="shenzhen" selected="selected">深圳</option>
-            <option value="zhaoqing">肇庆</option>
-        </select>市<br>
-        <div class="note">请选择您目前的所在地</div><br>
+            <select>省
+                <select name="city">
+                    <option value="shenzhen" selected="selected">深圳</option>
+                    <option value="zhaoqing">肇庆</option>
+                </select>市<br>
+                <div class="note">请选择您目前的所在地</div><br>
 
-        <input type="checkbox">本人已阅读注册协议</a><br>
-        <input class="btn" type="submit" value="确认注册"><br>
+                <input type="checkbox">本人已阅读注册协议</a><br>
+                <input class="btn" type="submit" value="确认注册"><br>
     </form>
-
 </body>
 </html>

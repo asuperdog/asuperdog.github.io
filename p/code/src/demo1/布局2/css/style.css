@@ -1,0 +1,93 @@
+body {
+    margin: 20px auto;
+    width: 85%;
+    background-image: url(../img/bgpic.jpg);
+    background-size: cover;
+    background-attachment:fixed; 
+    min-width: 1000px;
+}
+
+.page_header,
+.posts {
+    margin: auto 20px;
+    border-bottom: 1px grey solid;
+}
+
+.page_header nav {
+    float: right;
+    margin-top: 12px;
+}
+
+.page_header img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+.page_header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.page_header nav ul li {
+    margin-right: 20px;
+    padding: 0;
+    display: inline;
+}
+
+.post p {
+    width: 480px;
+}
+
+.post p+p {
+    width: 820px;
+}
+
+.post aside p {
+    color: red;
+    float: right;
+    width: 280px;
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.author {
+    color: grey;
+    font-size: 14.5px;
+}
+
+.sidebar {
+    float: right;
+    margin-left: 5%;
+    width: 15%;
+}
+
+.sidebar nav ul li {
+    display: block;
+}
+
+.page_footer {
+    text-align: center;
+}
+
+.page_footer nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.page_footer nav ul li {
+    margin-right: 20px;
+    padding: 0;
+    display: inline;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}

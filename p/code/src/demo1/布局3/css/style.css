@@ -1,0 +1,162 @@
+body {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.main {
+    height: 500px;
+}
+
+/* -- Header -- */
+.header {
+    height: 120px;
+    border: 1px white solid;
+    background: url(../img/header.jpg);
+}
+
+.header div {
+    color: green;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.header span {
+    font-size: 12px;
+    margin-left: 30px;
+}
+
+/* -- Navbar -- */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: green;
+    display: block;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 5px 13px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px green solid;
+    border-width: 0 1px 0 0;
+}
+
+li a:hover {
+    background-color: #ddd;
+}
+
+/* -- Sidebar -- */
+.sidebar {
+    float: left;
+    width: 225px;
+    height: 500px;
+    margin: 15px 30px 0 1px;
+}
+
+.standard {
+    height: 275px;
+    background: url(../img/standard.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.standard p,
+.standard header {
+    margin: 0 10px;
+}
+
+.news {
+    height: 200px;
+    padding-top: 10px;
+    border-top: 1px gray dashed;
+}
+
+.greenRec {
+    float: left;
+    width: 5px;
+    height: 70px;
+    margin-top: 14px;
+    margin-right: 5px;
+    background-color: lightgreen;
+}
+
+.blueRec {
+    float: left;
+    width: 5px;
+    height: 70px;
+    margin-top: 2px;
+    margin-right: 5px;
+    background-color: lightskyblue;
+}
+
+/* -- Content -- */
+.welcome {
+    float: left;
+    width: 690px;
+    margin-top: 10px;
+    background: url(../img/header1.jpg) no-repeat;
+    background-size: 25% 25%;
+    background-position: 99% 0%;
+    border-bottom: 1px gray dashed;
+}
+
+.service {
+    float: left;
+    width: 690px;
+    height: 150px;
+    margin-top: 6px;
+}
+
+.item1 {
+    float: left;
+    width: 310px;
+    margin-top: 6px;
+    margin-left: 15px;
+}
+
+.item2 {
+    float: left;
+    width: 310px;
+    margin-top: 6px;
+    margin-left: 50px;
+}
+
+/* -- Footer -- */
+.footer {
+    height: 60px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    border: 1px white solid;
+    background: url(../img/footer.jpg);
+}
+
+.footer p {
+    margin-top: 23px;
+}
+
+/* -- FontSet -- */
+p {
+    font-size: 12px;
+}
+
+header {
+    color: #ff6666;
+}
+
+.newsTitle,
+.welcome div {
+    color: #0099cc;
+    font-weight: bold;
+}
+
+.item1 div,
+.item2 div {
+    color: #0099cc;
+}
