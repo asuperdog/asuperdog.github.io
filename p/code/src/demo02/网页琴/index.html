@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>网页钢琴</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link type="text/css" rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
     <div class="container" id="container">
-        <h1>钢琴：使用鼠标左键或者键盘进行弹奏</h1>
+        <h1>钢琴：使用鼠标左键或键盘进行弹奏</h1>
         <div class="key_all">
             <!-- 琴键层 -->
             <div id="key0" class="key whiteKey"></div>
@@ -19,20 +19,20 @@
             <div id="key5" class="key whiteKey"></div>
             <div id="key6" class="key whiteKey"></div>
             <div id="key7" class="key whiteKey"></div>
-            <div id="key8" class="key blackKey"  style="left: 54px"></div>
-            <div id="key9" class="key blackKey"  style="left: 127px"></div>
-            <div id="key10" class="key blackKey" style="left: 273px"></div>
-            <div id="key11" class="key blackKey" style="left: 346px"></div>
-            <div id="key12" class="key blackKey" style="left: 419px"></div>
+            <div id="key8" class="key blackKey" style="left: 54px;"></div>
+            <div id="key9" class="key blackKey" style="left: 127px;"></div>
+            <div id="key10" class="key blackKey" style="left: 273px;"></div>
+            <div id="key11" class="key blackKey" style="left: 346px;"></div>
+            <div id="key12" class="key blackKey" style="left: 419px;"></div>
+            <div id="key13" class="key blackKey" style="left: 564px;"></div>
         </div>
         <div class="instructions">
             <!-- 操作及说明层 -->
             <h3>弹奏方法</h3>
             <button id="record">录制</button>
-            <button id="playRecord">播放</button>
-            <p>使用鼠标左键点击钢琴键，或者敲击键盘</p>
-            <p>梁宇成 1901010221</p>
-            <p>支持浏览器：IE 9 以上、Firefox 10 以上、Chrome 17 以上</p>
+            <button id="play">播放</button>
+            <p>使用鼠标左键点击钢琴键，或者敲击键盘。</p>
+            <p>支持浏览器：IE 9以上、Firefox 10以上、Chrome 17以上</p>
         </div>
     </div>
     <script type="text/javascript" src="src/js/sound.js"></script>

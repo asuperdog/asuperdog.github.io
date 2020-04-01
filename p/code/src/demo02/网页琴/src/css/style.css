@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+button, .key {
+    cursor: pointer;
+}
+
 /* 大容器 */
 .container {
     width: 584px;
@@ -10,32 +14,36 @@ body {
     margin: 0 auto;
 }
 
-/* 容器的所有按钮 */
-.container .key_all {
+.container h1 {
+    text-align: center;
+}
+
+.key_all {
     margin: 0 auto;
     padding: 0;
     height: 420px;
     position: relative;
     background: #ccc;
+    overflow: hidden;
 }
 
-/* 所有按键 */
 .key_all .key {
     float: left;
     text-align: center;
     font-size: 16px;
     background-position: bottom left;
     background-repeat: repeat-x;
+
 }
 
 /* 白色按键 */
 .key_all .whiteKey {
     width: 71px;
     height: 360px;
-    color: #666666;
-    background-color: #eeeeee;
-    background-image: url("../img/key_back_white.png");
+    color: #666;
     border: 1px solid #999;
+    background-color: #eee;
+    background-image: url(../img/key_white.png);
 }
 
 /* 黑色按键 */
@@ -43,15 +51,15 @@ body {
     width: 36px;
     height: 200px;
     border: 1px solid #666;
-    background: #666 url("../img/key_back_black.png");
+    background-color: #666;
+    background-image: url(../img/key_black.png);
     position: absolute;
     top: 0;
 }
 
-/* 操作说明区 */
+/* 操作说明层 */
 .instructions {
     font-size: 12px;
     line-height: 18px;
     padding-left: 20px;
-
 }
