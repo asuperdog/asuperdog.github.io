@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/default.css">
+    <title>钢琴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+         /*在手机上旋转270度*/
+        .phonecontainer{
+        transform:rotate(270deg);
+        -ms-transform:rotate(270deg); /* Internet Explorer */
+        -moz-transform:rotate(270deg); /* Firefox */
+        -webkit-transform:rotate(270deg); /* Safari 和 Chrome */
+        -o-transform:rotate(270deg); /* Opera */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>钢琴：使用鼠标左键或者键盘进行弹奏</h1>
+        <div class="key_all">
+            <div id="key0" class="key whiteKey"></div>
+            <div id="key1" class="key whiteKey"></div>
+            <div id="key2" class="key whiteKey"></div>
+            <div id="key3" class="key whiteKey"></div>
+            <div id="key4" class="key whiteKey"></div>
+            <div id="key5" class="key whiteKey"></div>
+            <div id="key6" class="key whiteKey"></div>
+            <div id="key7" class="key whiteKey"></div>
+            <div id="key8" class="key blackKey"  style="left: 54px"></div>
+            <div id="key9" class="key blackKey"  style="left: 127px"></div>
+            <div id="key10" class="key blackKey" style="left: 200px"></div>
+            <div id="key11" class="key blackKey" style="left: 273px"></div>
+            <div id="key12" class="key blackKey" style="left: 347px"></div>
+        </div>
+        <div class="instructions">
+            <h3>弹奏方法
+            <button id="record">录制</button>
+            <button id="playRecord">播放</button>
+            </h3>
+            <p>使用鼠标左键点击钢琴键，或者敲击键盘</p><br/><p>支持浏览器：IE9以上、Firefox10以上、Chrome17以上</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/core.js"></script>
+</body>
+</html>

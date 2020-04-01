@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>align-content</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .box {
+            background-color: #66ccff;
+            display: flex;
+            /*webkit 内核*/
+            display: -webkit-flex;
+            flex-flow: row wrap;
+            align-content: flex-end;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="debug">1</div>
+        <div class="debug">2</div>
+        <div class="debug">3</div>
+        <div class="debug">4</div>
+        <div class="debug">5</div>
+        <div class="debug">6</div>
+        <div class="debug">7</div>
+    </div>
+</body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> align-items: stretch</title>
+
+    <style>
+        .box {
+            height: 300px;
+            background-color: #66ccff;
+            display: flex;
+            display: -webkit-flex;
+            /*webkit 内核*/
+            align-items: stretch;
+        }
+
+        .debug {
+            border-style: solid;
+            margin: 4px;
+            width: 100px;
+            /* 在这里取消了盒子的高度 */
+            background-color: #ffaf4a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="debug">1</div>
+        <div class="debug">2</div>
+        <div class="debug">3</div>
+        <div class="debug">4</div>
+    </div>
+</body>

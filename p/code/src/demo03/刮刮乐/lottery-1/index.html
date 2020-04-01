@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 兼容手机-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>刮刮乐抽奖活动</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body onload="core.init()">
+    <div id="background"></div>
+    <div>
+        <canvas id="myCanvas" width="300" height="300"></canvas>
+        <!--<div id="oy" style="background-color: brown; height: 15px; width: 15px"></div>-->
+    </div>
+
+</body>
+<script>
+    var canvas= document.getElementById("myCanvas");// 获取canvas对象的DOM节点
+//    if (canvas.getContext) {// 是否存在上下文
+//        var ctx = canvas.getContext("2d");// 获取上下文
+//
+//        ctx.fillStyle = "rgb(200,0,0)";// 设置填充色为RGB（200,0,0）
+//        ctx.fillRect (10, 10, 55, 50);// 绘制“被填充”的矩形
+//        ctx.fillStyle = "rgba(0, 0, 200, 0.5)"; //设置填充色为RGB（0,0,200），透明度为0.5
+//        ctx.fillRect (30, 30, 55, 50);
+//    }
+
+//    var ctx = canvas.getContext("2d");
+//    ctx.beginPath();
+//    ctx.moveTo(0,0);
+//    ctx.lineTo(700,400);
+//    ctx.closePath();
+//    ctx.stroke();
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> align-items: stretch</title>
+
+    <style>
+        .box {
+            background-color: #66ccff;
+            display: flex;
+            display: -webkit-flex;
+            /*webkit 内核*/
+            align-items: baseline;
+        }
+        .debug {
+            border-style: solid;
+            margin: 4px;
+            width: 100px;
+            /* 在这里取消了盒子的高度 */
+            background-color: #ffaf4a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="debug" style="height: 30px;line-height: 30px;">1</div>
+        <div class="debug" style="height: 40px;line-height: 40px;">2</div>
+        <div class="debug" style="height: 50px;line-height: 50px;">3</div>
+        <div class="debug" style="height: 60px;line-height: 60px;">4</div>
+    </div>
+</body>

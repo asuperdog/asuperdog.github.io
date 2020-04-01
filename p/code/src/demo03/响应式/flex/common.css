@@ -1,0 +1,23 @@
+.debug {
+    border-style: solid;
+    margin: 4px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffaf4a;
+}
+
+.debug3 {
+    border-style: solid;
+    margin: 4px;
+    width: 100px;
+    height: 200px;
+    background-color: #ffaf4a;
+}
+
+.debug4 {
+    border-style: solid;
+    margin: 4px;
+    width: 100px;
+    height: 300px;
+    background-color: #ffaf4a;
+}

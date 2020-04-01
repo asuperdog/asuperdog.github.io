@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex-grow</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .box {
+            text-align: center;
+            background-color: #66ccff;
+            display: flex;            
+            display: -webkit-flex; /*webkit 内核*/
+            flex-direction: row;
+            /* 定义项目在交叉轴上的对齐方式
+flex-start 上方对齐 flex-end下方对齐  center居中对齐baseline 项目的第一行文字的基线对齐。
+stretch 如果项目未设置高度或设为auto，将占满整个容器的高度。（默认值）  */
+            align-items:  baseline
+        }
+        .d2{
+            height: 200px;
+        }
+        .d3{
+            height: 300px;
+        }
+        .d4{
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="debug">1</div>
+        <div class="debug d2">2</div>
+        <div class="debug d3">3</div>
+        <div class="debug d4">4</div>
+    </div>
+</body>

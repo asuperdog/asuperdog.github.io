@@ -1,0 +1,20 @@
+
+/**默认样式表*/
+
+#background{
+      background-color: brown;
+      width:200px;
+      height:80px;
+}
+
+#myCanvas{
+    z-index: 999;
+    position: absolute;
+}
+body{
+    /*background-color: black;*/
+}
+#oy{
+    position: absolute;
+    top: 200px;
+}

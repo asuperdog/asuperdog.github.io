@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex-wrap</title>
+    <link rel="stylesheet" href="./common.css">
+    <style>
+        .box {
+            background-color: #66ccff;
+            display: flex;
+            /*webkit 内核*/
+            display: -webkit-flex;
+            /* 可选值 
+            row (从左往右) 
+            row-reverse （从右往左） 
+            column （从上往下） 
+            column-reverse （从下往上）
+             */
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="debug">1</div>
+        <div class="debug">2</div>
+        <div class="debug">3</div>
+        <div class="debug">4</div>
+        <div class="debug">5</div>
+        <div class="debug">6</div>
+
+    </div>
+</body>

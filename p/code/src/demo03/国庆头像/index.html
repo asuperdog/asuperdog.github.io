@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang='zh-cn'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width,maximum-scale=1.0,minimum-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>国庆头像转换</title>
+  <style>
+    body {
+      font-size: 20px;
+      text-align: center;
+      margin: 0;
+    }
+
+    label {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      font-size: 10px;
+    }
+
+    button {
+      font-size: 18px;
+      color: #fff;
+      padding: 0 30px;
+      height: 2.3rem;
+      background: #FE2E2E;
+      border: 0;
+      border-radius: 20px;
+    }
+
+    #canvas {
+      margin: 30px auto;
+    }
+
+    #exportImage {
+      margin: 20px auto;
+      width: 250px;
+      height: 250px;
+    }
+
+    #upload {
+      height: 10rem;
+      width: 10rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0
+    }
+
+    .title {
+      color: #d54738;
+      height: 3rem;
+    }
+
+    .canvas-container {
+      margin: 0 auto;
+    }
+
+    #uploadContainer {
+      margin: 30px auto;
+      height: 200px;
+      width: 200px;
+      border: solid 1px #aaa;
+      box-shadow: 0 0 5px #aaa;
+      border-radius: 20px;
+      line-height: 200px;
+      position: relative;
+    }
+
+    #editAvatarContainer {
+      display: none;
+      margin: 0 auto;
+    }
+
+    #buttonContainer button {
+      display: block;
+      margin: 20px auto;
+    }
+
+    #afterChangeContainer {
+      display: none;
+      margin: 30px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='title'>
+    <h2>国庆头像变换</h2>
+  </div>
+  <div id='uploadContainer'>
+    <small id='uploadText'>上传头像</small>
+    <input id='upload' type='file' onchange='fileChange()'>
+  </div>
+  <div id='editAvatarContainer'>
+    <img id='img' src='' style="display:none" alt='储存用户头像图' />
+    <canvas id='canvas'></canvas>
+    <div id="buttonContainer">
+      <button id='changeAvatarBtn' onclick='changeAvatar()'>换个头像</button>
+      <button id='changeBorderBtn' onclick='changeBorder()'>换个边框</button>
+      <button id='exportBtn' onclick='exportAvatar()'>生成头像</button>
+    </div>
+  </div>
+  <div id="afterChangeContainer">
+    <img id='exportImage' alt='改变后头像' src='' />
+    <p id='tip'>
+      右键或长按图片即可保存
+    </p>
+  </div>
+  <div id="borderImgContainer" style='display: none'>
+    <img class='borderImg' id='avatarBorder0' src='./img/avatarBorder0.png' />
+    <img class='borderImg' id='avatarBorder1' src='./img/avatarBorder1.png' />
+    <img class='borderImg' id='avatarBorder2' src='./img/avatarBorder2.png' />
+    <img class='borderImg' id='avatarBorder3' src='./img/avatarBorder3.png' />
+  </div>
+
+  <script>
+    let canvas = document.querySelector('#canvas')
+    let ctx = canvas.getContext("2d")
+    let avatarImg = document.querySelector('#img')
+    let avatarBorder = "avatarBorder0"
+    let screenWidth = window.screen.width < 350 ? window.screen.width : 350
+    let upload = document.querySelector('#upload')
+    let exportImage = document.querySelector('#exportImage')
+    let uploadContainer = document.querySelector('#uploadContainer')
+    let editAvatarContainer = document.querySelector('#editAvatarContainer')
+    let afterChangeContainer = document.querySelector('#afterChangeContainer')
+
+    //上传头像 在画布上展示
+    function fileChange() {
+      let file = upload.files[0];
+      console.log(file); // FileList对象
+      let reader = new FileReader;
+      reader.readAsDataURL(file);
+      reader.onload = (e) => {
+        avatarImg.src = reader.result;
+        avatarImg.onload = () => {
+          drawToCvs()
+        }
+      }
+    }
+
+    // 把图片绘制到画布上
+    function drawToCvs() {
+      canvas.width = screenWidth - 50;
+      canvas.height = screenWidth - 50;
+      // 清空画布
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(avatarImg, 0, 0, canvas.width, canvas.height)
+      let borderImage = document.querySelector(`#${avatarBorder}`);
+      ctx.drawImage(borderImage, 0, 0, canvas.width, canvas.height)
+      uploadContainer.style.display = "none";
+      editAvatarContainer.style.display = "block"
+    }
+
+
+    function changeBorder() {
+      // 清空画布
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let avatarBorders = document.querySelectorAll(".borderImg");
+      avatarBorder = "avatarBorder" + (+avatarBorder.replace("avatarBorder", "") + 1) % avatarBorders.length;
+      let borderImage = document.querySelector(`#${avatarBorder}`);
+      ctx.drawImage(avatarImg, 0, 0, canvas.width, canvas.height)
+      ctx.drawImage(borderImage, 0, 0, canvas.width, canvas.height)
+    }
+
+    function changeAvatar() {
+      upload.click()
+    }
+
+    // 合成图片
+    function exportAvatar() {
+      exportImage.src = canvas.toDataURL('image/png')
+      editAvatarContainer.style.display = "none"
+      afterChangeContainer.style.display = "block"
+    }
+  </script>
+</body>
+
+</html>
