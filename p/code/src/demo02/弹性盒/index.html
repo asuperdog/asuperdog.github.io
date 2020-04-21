@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性布局</title>
+    <style>
+        .box {
+            width: 850px;
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+        }
+
+        .test {
+            width: 200px;
+            height: 200px;
+            background-image: url(https://i.loli.net/2020/04/21/7Ks6XFv9YWVmgPx.jpg);
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+        }
+
+        .test:hover {
+            background-image: url(https://i.loli.net/2020/04/21/ZGIo57CYeLAV6uM.jpg);
+            background-size: 200px 200px;
+            background-repeat: no-repeat;
+            transition: background-image 1s;
+            -webkit-transition: background-image 1s;
+        }
+
+        .price {
+            width: 150px;
+            height: 40px;
+            margin-left: 25px;
+            margin-top: 150px;
+            text-align: center;
+            border: 1px solid gray;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <p>人气推荐</p>
+    <div class="box">
+        <div class="test" id="box1">
+            <div class="price">
+                <span>蛋糕</span><br>
+                <span style="color: red;">￥360</span>
+            </div>
+        </div>
+        <div class="test" id="box2">
+            <div class="price">
+                <span>蛋糕</span><br>
+                <span style="color: red;">￥360</span>
+            </div>
+        </div>
+        <div class="test" id="box3">
+            <div class="price">
+                <span>蛋糕</span><br>
+                <span style="color: red;">￥360</span>
+            </div>
+        </div>
+        <div class="test" id="box4">
+            <div class="price">
+                <span>蛋糕</span><br>
+                <span style="color: red;">￥360</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
