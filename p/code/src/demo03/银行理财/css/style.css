@@ -1,0 +1,164 @@
+body {
+    min-width: 980px;
+}
+
+#header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #DDDDDD;
+}
+
+#navBar {
+    height: 50px;
+    background-color: #1874CD;
+}
+
+#navBar li:hover {
+    background-color: dodgerblue;
+}
+
+#navBar li a {
+    color: white;
+    font-size: 18px;
+    padding: 11px 22px;
+}
+
+#sidebar {
+    position: fixed;
+    top: 200px;
+    right: 0;
+}
+
+.sideBox {
+    width: 50px;
+    height: 150px;
+    background-color: #2F2F2F;
+}
+
+.sideBox li {
+    width: 64px;
+    height: 50px;
+    border: 1px solid gray;
+}
+
+.icon-bar {
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+    margin-left: 9px;
+    display: inline-block;
+}
+
+.icon-bar1 {
+    background-image: url("../img/icon-bar1.png");
+    background-repeat: no-repeat;
+}
+
+.icon-bar2 {
+    background-image: url("../img/icon-bar2.png");
+    background-repeat: no-repeat;
+}
+
+.icon-bar3 {
+    display: inline-block;
+    background-image: url("../img/icon-bar3.png");
+    background-repeat: no-repeat;
+}
+
+#product {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: #EEEEEE;
+}
+
+.product-buy {
+    margin-bottom: 40px;
+    border: 1px solid #DEE2E6;
+    background-color: white;
+}
+
+.product-name {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.icon-Product {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url("../img/baseIcon.png");
+    background-repeat: no-repeat;
+    background-position: -48px -305px;
+}
+
+.product-main {
+    text-align: center;
+}
+
+.numFont {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#product-wrap {
+    border: 1px solid #DEE2E6;
+    background-color: white;
+}
+
+.wrap-title {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#footer {
+    height: 265px;
+    text-align: center;
+    background-color: #DDDDDD;
+}
+
+.icon-WeChat {
+    width: 85px;
+    height: 22px;
+    display: inline-block;
+    background-image: url("../img/footerIcons.png");
+    background-repeat: no-repeat;
+    background-position: -32px -50px;
+    transition: background-position 500ms;
+}
+
+.icon-WeChat:hover {
+    width: 85px;
+    height: 22px;
+    cursor: pointer;
+    display: inline-block;
+    background-image: url("../img/footerIcons.png");
+    background-repeat: no-repeat;
+    background-position: -31px -72px;
+}
+
+.icon-Weibo {
+    width: 85px;
+    height: 26px;
+    display: inline-block;
+    background-image: url("../img/footerIcons.png");
+    background-repeat: no-repeat;
+    background-position: -31px 0;
+    transition: background-position 500ms;
+}
+
+.icon-Weibo:hover {
+    width: 85px;
+    height: 26px;
+    cursor: pointer;
+    display: inline-block;
+    background-image: url("../img/footerIcons.png");
+    background-repeat: no-repeat;
+    background-position: -32px -25px;
+}
+
+@media screen and (max-width: 980px) {
+    #sidebar {
+        display: none !important
+    }
+}

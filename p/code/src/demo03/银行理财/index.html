@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <title>银行理财产品</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--Header-->
+<div id="header">
+    <div class="container">
+        <div style="float: left">
+            <span>客服热线：<span style="color: red">400-400-4000</span></span>
+        </div>
+        <div style="text-align: right">
+            <button class="btn btn-light">登录</button>
+            <button class="btn btn-success">注册</button>
+        </div>
+    </div>
+</div>
+
+<!--NavBar-->
+<div id="navBar">
+    <div class="container">
+        <ul class="nav">
+            <li><a class="nav-link" href="#">理财首页</a></li>
+            <li><a class="nav-link" href="#">银行理财</a></li>
+            <li><a class="nav-link" href="#">理财公告</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--SideBar-->
+<div id="sidebar">
+    <div class="sideBox">
+        <ul class="list-unstyled">
+            <li><a href="#"><span class="icon-bar icon-bar1"></span></a></li>
+            <li><a href="#"><span class="icon-bar icon-bar2"></span></a></li>
+            <li><a href="#"><span class="icon-bar icon-bar3"></span></a></li>
+        </ul>
+    </div>
+</div>
+
+<!--Container-->
+<div id="product">
+    <div class="container">
+        <div class="product-buy">
+            <div class="product-name">
+                <h4>安富&nbsp;<span style="color: dimgray">200110期</span>&nbsp;<span class="icon-Product"></span></h4>
+            </div>
+            <hr>
+            <div class="row product-main">
+                <div class="col-8 border-right">
+                    <div class="row">
+                        <div class="col-4 border-right">
+                            <span>预期年化利率</span><br>
+                            <span class="numFont">3.07</span><span>%</span>
+                        </div>
+                        <div class="col-4 border-right">
+                            <span>投资期限（天）</span><br>
+                            <span class="numFont">90</span><span>天</span>
+                        </div>
+                        <div class="col-4">
+                            <span>起投金额（元）</span><br>
+                            <span class="numFont">10000</span><span>元</span>
+                        </div>
+                    </div>
+                    <br>
+
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>项目起息日</td>
+                            <td>2020-03-25</td>
+                            <td>项目到期日</td>
+                            <td>2020-08-25</td>
+                        </tr>
+                        <tr>
+                            <td>递增金额</td>
+                            <td>1000.00元</td>
+                            <td>投资截止日期</td>
+                            <td><span id="leftTime"></span></td>
+                        </tr>
+                        <tr>
+                            <td>投标进度</td>
+                            <td colspan="2">
+                                <div class="progress" style="margin-top: 5px">
+                                    <div class="progress-bar" id="progress" style="width: 70%"></div>
+                                </div>
+                            </td>
+                            <td><span id="percent">70</span>%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-4">
+                    <span>剩余可投金额（元）</span><br>
+                    <span class="numFont">￥</span><span class="numFont" id="maxMoney">300000</span><br>
+                    <p>账户余额：<span id="balance">50000</span>元<br>
+                        预计收益：<span id="profit" style="color: red">0.00</span>元</p>
+                    <label><input type="text" class="form-control" id="amount" placeholder="请输入整数金额..."></label><br>
+                    <button id="submit" class="btn btn-primary" onclick="checkAll()">立即投资</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--NavTabs-->
+    <div class="container">
+        <div id="product-wrap">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#wrap01">产品说明</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#wrap02">风险揭示</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#wrap03">权益须知</a>
+                </li>
+            </ul>
+            <!--Tab Panes-->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="wrap01">
+                    <div class="wrap-title"><b>产品说明书</b></div>
+                    <p>尊敬的客户：</p>
+                    <p>1. 为了维护您的权益，请在签署本协议前，仔细阅读本协议各条款，充分了解银行理财业务的运作规则、协议双方的权利、义务和责任。如有任何疑问，可向银行理财产品发售机构咨询。</p>
+                    <p>2. 理财非存款、产品有风险，投资须谨慎。本理财计划可能涉及的相关风险具体内容见《风险揭示书》，投资者应仔细阅知并签署《风险揭示书》。</p>
+                    <p>3. 测算收益不等于实际收益，投资需谨慎。本理财产品过往业绩不代表其未来表现，不等于理财产品实际收益，投资须谨慎。
+                    <p>...</p>
+                </div>
+                <div class="tab-pane container" id="wrap02">
+                    <div class="wrap-title"><b>风险揭示书</b></div>
+                    <p>特别提示：</p>
+                    <p>1. 本理财产品有投资风险，请您仔细了解本理财产品的具体情况。</p>
+                    <p>2. 本理财计划是非保本浮动收益净值型产品，与银行存款不同，不保证本金和收益，您应充分认识投资风险，谨慎投资。 </p>
+                    <p>3. 产品的投资者范围为满足我行私人银行客户条件（详见客户声明书）的投资者。</p>
+                    <p>4. 投资者认购\申购本理财计划成功后，若客户不提起赎回申请，投资者持有理财产品份额将在三个月后自动再投资。</p>
+                    <p>5. 理财产品运作期间，若该理财产品投资标的出现风险，则投资者的实际收益可能为负，在最不利的极端情况下，客户可能损失全部本金。</p>
+                    <p>...</p>
+                </div>
+                <div class="tab-pane container" id="wrap03">
+                    <div class="wrap-title"><b>客户权益须知</b></div>
+                    <p>尊敬的客户：</p>
+                    <p>理财非存款、产品有风险、投资须谨慎。为了保护您的合法权益，请在投资前认真阅读以下内容：</p>
+                    <p>一、客户买产品流程</p>
+                    <p>如客户前往网点购买理财产品：</p>
+                    <p>1、购买本理财产品的个人客户需要提供的资料清单：</p>
+                    <p>（1）本人有效身份证件。</p>
+                    <p>（2）本人的银行理财通卡或存折。</p>
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<div id="footer">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-2 border-secondary border-right">
+                <h5>关于我们</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">网站地图</a></li>
+                    <li><a class="text-muted" href="#">网站声明</a></li>
+                    <li><a class="text-muted" href="#">官方渠道</a></li>
+                    <li><a class="text-muted" href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="col-2 border-secondary border-right">
+                <h5>帮助中心</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="#">新手指南</a></li>
+                    <li><a class="text-muted" href="#">常见问题</a></li>
+                    <li><a class="text-muted" href="#">网银工具</a></li>
+                    <li><a class="text-muted" href="#">收费标准</a></li>
+                </ul>
+            </div>
+            <div class="col-2 border-secondary border-right">
+                <h5>关注我们</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="#"><span class="icon-WeChat"></span></a></li>
+                    <li><a href="#"><span class="icon-Weibo"></span></a></li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <span>客服热线（工作日 08:00-20:00）</span><br>
+                <h3>400-400-4000</h3>
+                <span><i>service@example.com</i></span><br>
+                <span>Copyright 2020 xxx.com All Rights Reserved</span><br>
+                <span>粤ICP备12345678号</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
