@@ -4,16 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="shortcut icon" href="../../src/img/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
 	<title>关于渣狗</title>
+	<link rel="shortcut icon" href="../../src/img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 </head>
 <body>
 	<div class="container">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="../../">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">About</li>
+				<li class="breadcrumb-item active">About</li>
 			</ol>
 		</nav>
 		<div class="jumbotron">
@@ -25,22 +27,65 @@
 					<img src="https://i.loli.net/2020/08/13/zsRUNQM6e1vw2rh.jpg" class="card-img-top" alt="me.jpg">
 					<div class="card-body">
 						<h5 class="card-title">个人信息</h5>
-						<p class="card-text">小宇 / 男 / 2000.</p>
-						<p class="card-text">坐标 : Shenzhen.</p>
-						<p class="card-text">人生愿望是世界和平.</p>
-						<a href="mailto:mail@superdog.me" class="btn btn-light">eMail</a>
-						<a href="https://github.com/asuperdog" class="btn btn-light" target="_blank">GitHub</a>
+						<p>小宇 / 男 / 2000.</p>
+						<p>坐标 : Shenzhen.</p>
+						<p>人生愿望是世界和平.</p>
+						<audio src="https://superdog.oss-cn-hongkong.aliyuncs.com/Todd%20Li%20-%20%E5%B0%8F%E5%AE%87.mp3" controls="controls" style="width: 100%;"></audio>
 					</div>
 				</div>
-				<iframe src="https://music.163.com/outchain/player?type=2&id=476659144&auto=1&height=66" class="mt-2" width="100%" height="86" frameborder="no"></iframe>
 			</div>
 			<div class="col-md-8 col-sm-12">
-
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title"># 我是谁</h5>
+						<p>Kole，柴柯夫斯基.</p>
+						<p>一个不会敲代码的小白.</p>
+						<p>喜欢夏天，喜欢看不同的风景.</p>
+						<p>耳机依赖患者，互联网冲浪金牌选手.</p>
+						<br>
+						<h5 class="card-title"># 兴趣爱好</h5>
+						<p>
+							<span class="badge badge-pill badge-info">摄影</span>
+							<span class="badge badge-pill badge-info">阅读</span>
+							<span class="badge badge-pill badge-info">弹唱</span>
+							<span class="badge badge-pill badge-info">桌球</span>
+							<span class="badge badge-pill badge-info">骑行</span>
+						</p>
+						<br>
+						<h5 class="card-title"># 近期目标</h5>
+						<ul>
+							<li>备考 英语四级.</li>
+							<li>复习 Java 基础.</li>
+						</ul>
+						<br>
+						<h5 class="card-title"># 联系方式</h5>
+						<p><a href="https://api.btstu.cn/qqtalk/api.php?qq=434300950" target="_blank">QQ : 434300950</a></p>
+						<p><a href="mailto:mail@superdog.me">邮箱 : mail@superdog.me</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="gitalk-container"></div>
 			</div>
 		</div>
-		<div class="alert alert-light">
-			<span>Copyright &copy; 2020 柴柯夫斯基.</span>
+		<div class="py-3">
+			<div class="container">
+				<span class="text-muted">Copyright &copy; 2020 柴柯夫斯基.</span>
+			</div>
 		</div>
 	</div>
+	<script>
+		var gitalk = new Gitalk({
+		clientID: '81e756c2fa139a3c10db',
+		clientSecret: '7513758d2357eb89da610e506aebb585afb06749',
+		repo: 'asuperdog.github.io',
+		owner: 'asuperdog',
+		admin: ['asuperdog'],
+		id: location.pathname,      // Ensure uniqueness and length less than 50
+		distractionFreeMode: false  // Facebook-like distraction free mode
+		})
+
+		gitalk.render('gitalk-container')
+	</script>
 </body>
 </html>
