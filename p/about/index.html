@@ -7,7 +7,7 @@
 	<title>关于渣狗</title>
 	<link rel="shortcut icon" href="../../src/img/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -18,13 +18,12 @@
 			</ol>
 		</nav>
 		<div class="jumbotron">
-			<h2 style="display: inline-block;">About Me</h2>
-			<audio src="https://superdog.oss-cn-hongkong.aliyuncs.com/Todd%20Li%20-%20%E5%B0%8F%E5%AE%87.mp3" controls="controls" style="float: right;"></audio>
+			<h2>About Me</h2>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-sm-12">
 				<div class="card">
-					<img src="https://i.loli.net/2020/08/13/zsRUNQM6e1vw2rh.jpg" class="card-img-top" alt="me.jpg">
+					<img src="https://superdog.oss-cn-hongkong.aliyuncs.com/photo/me.jpg" class="card-img-top" alt="me.jpg">
 					<div class="card-body">
 						<h5 class="card-title">个人信息</h5>
 						<p>小宇 / 男 / 2000.</p>
@@ -78,6 +77,43 @@
 			</div>
 		</div>
 	</div>
+	<!-- Music Player -->
+	<link rel="stylesheet" href="css/player.css">
+	<div id="QPlayer">
+		<div id="pContent">
+			<div id="player">
+				<span class="cover"></span>
+				<div class="ctrl">
+					<div class="musicTag marquee">
+						<strong>Title</strong>
+						<span> - </span>
+						<span class="artist">Artist</span>
+					</div>
+					<div class="ctrl-bar">
+						<div class="timer left">0:00</div>
+						<div class="contr">
+							<div class="rewind icon"></div>
+							<div class="playback icon"></div>
+							<div class="forward icon"></div>
+						</div>
+						<div class="right">
+							<div class="lists icon"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ssBtn">
+				<div class="adf"></div>
+			</div>
+		</div>
+		<ol id="playlist"></ol>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
+	<script src="js/playlist.js"></script>
+	<script src="js/player.js"></script>
+
+	<!-- Valine Plugin -->
     <script>
         new Valine({
             el: '#vcomments',
