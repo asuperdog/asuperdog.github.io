@@ -1,44 +1,28 @@
-
-<!-- saved from url=(0096)https://ehall.sziit.edu.cn/qljfwapp/sys/szxxmsmjx/*default/index1.do?hash=/ryjc_result/003/enter -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
-    
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="style.min.css">
-    <link rel="stylesheet" href="skin.css">
-    <link rel="stylesheet" href="bh-lib.min.css">
-
-
-<link rel="stylesheet" href="style1.css">
-
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.min.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
 </head>
-
-
-
-
-
-
-
-
 <body>
 	<div id="app">
 		<div class="mint-layout-container bh-bg-color-light cjauieny7 OPjdicwoslf">
-			
-			<div class="mint-layout-container pjhiwtwjo" style="">
+			<div class="mint-layout-container pjhiwtwjo">
 				<div id="app1" class="mint-layout-container" style="background: #F5DA81;">
 					<div class="bg-color s-orange2"></div>
 					<div class="mint-layout-spacing sjakx3nec OPjhiwxcyg1" style="height: 15px;"></div>
 					<img src="img/headPic.jpg" class="mint-image sjas257dv OPjhiwxcyh" style="width: 240px; height: 330px;">
 					<div class="mint-layout-spacing sjakx3nec OPjhiwxcyg" style="height: 15px;"></div>
-					<div class="mint-text bh-color-gray OPjhiwxcyne3 mt-color-default">走读学生，请出示健康码</div>
+					<div class="mint-text bh-color-gray OPjhiwxcyne3 mt-color-default">在校学生，请出示健康码</div>
 				</div>
 				<div class="mint-layout-spacing sjakx3nec OPjhiwxcyg" style="height: 15px;"></div>
 				<div class="mint-text bh-color-gray OPjhiwxcyne1 mt-color-default">
 					扫码时间：<span id="scanTime"></span>
-					</div>
+				</div>
 				<div class="mint-hr" style="background: rgb(232, 232, 232);"></div>
 				<div class="mint-text bh-color-gray vcode mt-color-default">
 					236657
@@ -49,7 +33,7 @@
 						<div class="mint-text bh-color-gray OPjhiwxcyne mt-color-default">姓名</div>
 					</div>
 					<div class="mint-layout-container-multiple-item" style="width: 75%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne2 mt-color-default">梁宇成</div>
+						<div class="mint-text bh-color-gray OPjhiwxcyne2 mt-color-default">孟川</div>
 					</div>
 				</div>
 				<div class="mint-layout-container-multiple">
@@ -57,7 +41,7 @@
 						<div class="mint-text bh-color-gray OPjhiwxcyne mt-color-default">学号</div>
 					</div>
 					<div class="mint-layout-container-multiple-item" style="width: 75%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne4 mt-color-default">1901010221</div>
+						<div class="mint-text bh-color-gray OPjhiwxcyne4 mt-color-default">1801010305</div>
 					</div>
 				</div>
 				<div class="mint-layout-container-multiple">
@@ -72,15 +56,16 @@
 		</div>
 	</div>
 
-
-
-	 <div class="mint-indicator" style="display: none;">
+	<div class="mint-indicator" style="display: none;">
 		<div class="mint-indicator-wrapper" style="padding: 15px;">
-			<span class="mint-indicator-spin"><div class="mint-spinner-snake" style="border-top-color: rgb(214, 214, 214); border-left-color: rgb(214, 214, 214); border-bottom-color: rgb(214, 214, 214); height: 32px; width: 32px;"></div></span><span class="mint-indicator-text" style="display: none;"></span>
+			<span class="mint-indicator-spin">
+				<div class="mint-spinner-snake"
+					style="border-top-color: rgb(214, 214, 214); border-left-color: rgb(214, 214, 214); border-bottom-color: rgb(214, 214, 214); height: 32px; width: 32px;">
+				</div>
+			</span><span class="mint-indicator-text" style="display: none;"></span>
 		</div>
 		<div class="mint-indicator-mask"></div>
 	</div>
-	 
 
 	<script>
 		var colorFlag = false;
@@ -93,7 +78,7 @@
 			}
 			colorFlag = !colorFlag;
 		}, 400);
-	
+
 		Date.prototype.format = function (format) {
 			var o = {
 				"M+": this.getMonth() + 1,
@@ -113,4 +98,5 @@
 		};
 		$('#scanTime').html(new Date().format("MM月dd日 hh:mm"));
 	</script>
-	</body></html>
+</body>
+</html>
