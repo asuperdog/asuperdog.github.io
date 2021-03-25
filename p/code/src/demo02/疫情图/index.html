@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>广东省实时数据地图</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href='img/virus.png'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Echarts -->
+        <div id="map-wrap"></div>
+        <!-- 切换地图 -->
+        <div class="btn-wrap">
+            <a href="javascript:switchMap(0)" class="btn btn-link">新增确诊</a>
+            <a href="javascript:switchMap(1)" class="btn btn-link">现存确诊</a>
+            <a href="javascript:switchMap(2)" class="btn btn-link">累计确诊</a>
+        </div>
+
+        <!-- 疫情数据 -->
+        <div id="yq-data">
+            <div class="total-data">
+                <div class="box">
+                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #e4583d;">{{totalData.xcqz_xz}}</span></div>
+                    <div><span class="md-num" style="color: #e4583d;">{{totalData.xcqz}}</span></div>
+                    <div><span class="btm-text">现存确诊</span></div>
+                </div>
+                <div class="box">
+                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #e99244;">{{totalData.xcys_xz}}</span></div>
+                    <div><span class="md-num" style="color: #e99244;">{{totalData.xcys}}</span></div>
+                    <div><span class="btm-text">现有疑似</span></div>
+                </div>
+                <div class="box">
+                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #ebcb4e;">{{totalData.jwsr_xz}}</span></div>
+                    <div><span class="md-num" style="color: #ebcb4e;">{{totalData.jwsr_lj}}</span></div>
+                    <div><span class="btm-text">境外输入</span></div>
+                </div>
+                <div class="box">
+                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #e4583d;">{{totalData.ljqz_xz}}</span></div>
+                    <div><span class="md-num" style="color: #e4583d;">{{totalData.ljqz}}</span></div>
+                    <div><span class="btm-text">累计确诊</span></div>
+                </div>
+                <div class="box">
+                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #59b3a3;">{{totalData.ljzy_xz}}</span></div>
+                    <div><span class="md-num" style="color:#59b3a3;">{{totalData.ljzy}}</span></div>
+                    <div><span class="btm-text">累计治愈</span></div>
+                </div>
+                <div class="box">
+                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #606f8f;">{{totalData.ljsw_xz}}</span></div>
+                    <div><span class="md-num" style="color: #606f8f;">{{totalData.ljsw}}</span></div>
+                    <div><span class="btm-text">累计死亡</span></div>
+                </div>
+            </div>
+            
+            <!-- 病例分布 -->
+            <div class="city-data">
+                <table class="yq-table table table-hover">
+                    <tr class="thead">
+                        <td style="background-color: #87cefa">地区</td>
+                        <td style="background-color: #e4583d">现存</td>
+                        <td style="background-color: #e99244">疑似</td>
+                        <td style="background-color: #ebcb4e">境外</td>
+                        <td style="background-color: #e4583d">确诊</td>
+                        <td style="background-color: #59b3a3">治愈</td>
+                        <td style="background-color: #606f8f">死亡</td>
+                    </tr>
+                    <tr v-for="(data, i) in cityData">
+                        <td>{{data.division_name}}</td>
+                        <td>{{data.qzbl_xy}}</td>
+                        <td>{{data.ysbl_xy}}</td>
+                        <td>{{data.jwsr_lj}}</td>
+                        <td>{{data.qzbl_lj}}</td>
+                        <td>{{data.zycybl_lj}}</td>
+                        <td>{{data.sw_lj}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

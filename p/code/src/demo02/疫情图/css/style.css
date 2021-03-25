@@ -1,0 +1,55 @@
+/* Echarts */
+#map-wrap {
+    height: 550px;
+    margin-top: 3%;
+}
+
+.btn-wrap {
+    margin: 10px;
+    text-align: center;
+}
+
+.btn-active {
+    color: #ff0000 !important;
+}
+
+/* 疫情数据 */
+#yq-data {
+    margin: 0 auto;
+    max-width: 720px !important;
+}
+
+.total-data {
+    margin: 0 auto;
+    height: 120px;
+}
+
+.total-data .box {
+    float: left;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.box .sm-num {
+    font-size: 14px;
+}
+
+.box .md-num {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.box .btm-text {
+    font-size: 16px;
+}
+
+/* 病例分布 */
+.yq-table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.yq-table .thead td {
+    color: white;
+}
