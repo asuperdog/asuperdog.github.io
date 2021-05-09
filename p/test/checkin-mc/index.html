@@ -1,108 +1,59 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="style.min.css">
-	<script type="text/javascript" src="jquery.min.js"></script>
-</head>
-<body>
-	<div id="app">
-		<div class="mint-layout-container bh-bg-color-light cjauieny7 OPjdicwoslf">
-			<div class="mint-layout-container pjhiwtwjo">
-				<div id="app1" class="mint-layout-container" style="background: #F5DA81;">
-					<div class="bg-color s-orange2"></div>
-					<div class="mint-layout-spacing sjakx3nec OPjhiwxcyg1" style="height: 15px;"></div>
-					<img src="img/headPic.jpg" class="mint-image sjas257dv OPjhiwxcyh" style="width: 240px; height: 330px;">
-					<div class="mint-layout-spacing sjakx3nec OPjhiwxcyg" style="height: 15px;"></div>
-					<div class="mint-text bh-color-gray OPjhiwxcyne3 mt-color-default">在校学生，请出示健康码</div>
-				</div>
-				<div class="mint-layout-spacing sjakx3nec OPjhiwxcyg" style="height: 15px;"></div>
-				<div class="mint-text bh-color-gray OPjhiwxcyne1 mt-color-default">
-					扫码时间：<span id="scanTime"></span>
-				</div>
-				<div class="mint-hr" style="background: rgb(232, 232, 232);"></div>
-				<div class="mint-text bh-color-gray vcode mt-color-default">
-					<span id="randomCode"></span>
-				</div>
-				<div class="mint-hr" style="background: rgb(232, 232, 232);"></div>
-				<div class="mint-layout-container-multiple">
-					<div class="mint-layout-container-multiple-item" style="width: 25%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne mt-color-default">姓名</div>
+<html lang="zh-cn">
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<title>https://ehall.sziit.edu.cn/qljfwapp/sys/szxxmsmjx/*default/index1.do</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div class="mint-layout-container bh-bg-color-light">
+				<div class="mint-layout-container layout-container">
+					<div id="app" class="mint-layout-container" style="background: #F5DA81;">
+						<div class="bg-color s-orange"></div>
+						<div class="mint-layout-spacing spacing1" style="height: 15px;"></div>
+						<img src="img/headPic.jpg" class="mint-image" style="width: 240px; height: 330px">
+						<div class="mint-layout-spacing spacing" style="height: 15px;"></div>
+						<div class="mint-text bh-color-gray main-text3">在校学生，请出示健康码</div>
 					</div>
-					<div class="mint-layout-container-multiple-item" style="width: 75%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne2 mt-color-default">孟川</div>
+					<div class="mint-layout-spacing spacing" style="height: 15px;"></div>
+					<div class="mint-text bh-color-gray main-text1">
+						扫码时间：<span id="scanTime"></span>
+					</div>
+					<div class="mint-hr" style="background: rgb(232, 232, 232);"></div>
+					<div class="mint-text bh-color-gray vcode">
+						<span id="randomCode"></span>
+					</div>
+					<div class="mint-hr" style="background: rgb(232, 232, 232);"></div>
+					<div class="mint-layout-container-multiple">
+						<div class="mint-layout-container-multiple-item" style="width: 25%;">
+							<div class="mint-text bh-color-gray main-text">姓名</div>
+						</div>
+						<div class="mint-layout-container-multiple-item" style="width: 75%;">
+							<div class="mint-text bh-color-gray main-text2"><span id="stuName"></span></div>
+						</div>
+					</div>
+					<div class="mint-layout-container-multiple">
+						<div class="mint-layout-container-multiple-item" style="width: 25%;">
+							<div class="mint-text bh-color-gray main-text">学号</div>
+						</div>
+						<div class="mint-layout-container-multiple-item" style="width: 75%;">
+							<div class="mint-text bh-color-gray main-text4"><span id="stuId"></span></div>
+						</div>
+					</div>
+					<div class="mint-layout-container-multiple">
+						<div class="mint-layout-container-multiple-item" style="width: 25%;">
+							<div class="mint-text bh-color-gray main-text">学院</div>
+						</div>
+						<div class="mint-layout-container-multiple-item" style="width: 75%;">
+							<div class="mint-text bh-color-gray main-text2"><span id="college"></span></div>
+						</div>
 					</div>
 				</div>
-				<div class="mint-layout-container-multiple">
-					<div class="mint-layout-container-multiple-item" style="width: 25%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne mt-color-default">学号</div>
-					</div>
-					<div class="mint-layout-container-multiple-item" style="width: 75%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne4 mt-color-default">1801010305</div>
-					</div>
-				</div>
-				<div class="mint-layout-container-multiple">
-					<div class="mint-layout-container-multiple-item" style="width: 25%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne mt-color-default">学院</div>
-					</div>
-					<div class="mint-layout-container-multiple-item" style="width: 75%;">
-						<div class="mint-text bh-color-gray OPjhiwxcyne2 mt-color-default">软件学院</div>
-					</div>
-				</div>
-				<!-- Donate -->
-				<!-- <div id="pay" style="text-align: center;background-color: pink;border-radius: 20px;width: 365px;height: 350px;margin: auto;position: absolute;top: 0;left: 0;right: 0;bottom: 0;">
-					<h1>一次性付费即可继续使用</h1>
-					<img src="img/pay.png" width="300px" height="300px">
-				</div> -->
 			</div>
 		</div>
-	</div>
-
-	<div class="mint-indicator" style="display: none;">
-		<div class="mint-indicator-wrapper" style="padding: 15px;">
-			<span class="mint-indicator-spin">
-				<div class="mint-spinner-snake"
-					style="border-top-color: rgb(214, 214, 214); border-left-color: rgb(214, 214, 214); border-bottom-color: rgb(214, 214, 214); height: 32px; width: 32px;">
-				</div>
-			</span><span class="mint-indicator-text" style="display: none;"></span>
-		</div>
-		<div class="mint-indicator-mask"></div>
-	</div>
-
-	<script>
-		var colorFlag = false;
-		setInterval(function changeColor() {
-			var app = document.querySelector("#app1 .bg-color");
-			if (!colorFlag) {
-				app.className = "bg-color s-orange";
-			} else {
-				app.className = "bg-color s-orange2";
-			}
-			colorFlag = !colorFlag;
-		}, 400);
-
-		Date.prototype.format = function (format) {
-			var o = {
-				"M+": this.getMonth() + 1,
-				"d+": this.getDate(),
-				"h+": this.getHours(),
-				"m+": this.getMinutes(),
-			}
-			if (/(y+)/.test(format)) {
-				format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-			}
-			for (var k in o) {
-				if (new RegExp("(" + k + ")").test(format)) {
-					format = format.replace(RegExp.$1, (RegExp.$1.length == 1) ? o[k] : (("00" + o[k]).substr(("" + o[k]).length)));
-				}
-			}
-			return format;
-		};
-		$('#scanTime').html(new Date().format("MM月dd日 hh:mm"));
-		$('#randomCode').html(new Date().format("hh" + "2995"));
-	</script>
-</body>
+	</body>
 </html>
