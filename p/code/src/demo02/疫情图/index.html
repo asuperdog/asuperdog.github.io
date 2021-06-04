@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh">
-
 <head>
     <title>广东省实时数据地图</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -12,7 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.13/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
 </head>
-
 <body>
     <div class="container">
         <!-- Echarts -->
@@ -23,42 +21,40 @@
             <a href="javascript:switchMap(1)" class="btn btn-link">现存确诊</a>
             <a href="javascript:switchMap(2)" class="btn btn-link">累计确诊</a>
         </div>
-
         <!-- 疫情数据 -->
         <div id="yq-data">
             <div class="total-data">
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #e4583d;">{{totalData.xcqz_xz}}</span></div>
-                    <div><span class="md-num" style="color: #e4583d;">{{totalData.xcqz}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="qz">{{totalData.xcqz_xz}}</span></div>
+                    <div><span class="md-num qz">{{totalData.xcqz}}</span></div>
                     <div><span class="btm-text">现存确诊</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #e99244;">{{totalData.xcys_xz}}</span></div>
-                    <div><span class="md-num" style="color: #e99244;">{{totalData.xcys}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="ys">{{totalData.xcys_xz}}</span></div>
+                    <div><span class="md-num ys">{{totalData.xcys}}</span></div>
                     <div><span class="btm-text">现有疑似</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #ebcb4e;">{{totalData.jwsr_xz}}</span></div>
-                    <div><span class="md-num" style="color: #ebcb4e;">{{totalData.jwsr_lj}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="jw">{{totalData.jwsr_xz}}</span></div>
+                    <div><span class="md-num jw">{{totalData.jwsr_lj}}</span></div>
                     <div><span class="btm-text">境外输入</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #e4583d;">{{totalData.ljqz_xz}}</span></div>
-                    <div><span class="md-num" style="color: #e4583d;">{{totalData.ljqz}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="qz">{{totalData.ljqz_xz}}</span></div>
+                    <div><span class="md-num qz">{{totalData.ljqz}}</span></div>
                     <div><span class="btm-text">累计确诊</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #59b3a3;">{{totalData.ljzy_xz}}</span></div>
-                    <div><span class="md-num" style="color:#59b3a3;">{{totalData.ljzy}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="zy">{{totalData.ljzy_xz}}</span></div>
+                    <div><span class="md-num zy">{{totalData.ljzy}}</span></div>
                     <div><span class="btm-text">累计治愈</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span style="color: #606f8f;">{{totalData.ljsw_xz}}</span></div>
-                    <div><span class="md-num" style="color: #606f8f;">{{totalData.ljsw}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="sw">{{totalData.ljsw_xz}}</span></div>
+                    <div><span class="md-num sw">{{totalData.ljsw}}</span></div>
                     <div><span class="btm-text">累计死亡</span></div>
                 </div>
             </div>
-            
             <!-- 病例分布 -->
             <div class="city-data">
                 <table class="yq-table table table-hover">
@@ -85,7 +81,5 @@
         </div>
     </div>
 </body>
-
 <script src="js/main.js"></script>
-
 </html>

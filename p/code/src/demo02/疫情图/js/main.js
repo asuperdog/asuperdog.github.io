@@ -57,7 +57,7 @@ function switchMap(num) {
                 mapChart.showLoading();
 
                 $.ajax({
-                    url: 'http://localhost/apidemo.php',
+                    url: 'https://api.superdog.tech:8190/api/covid19/citydata',
                     dataType: 'json',
                     success: function (data) {
                         var mapData = [];
@@ -128,7 +128,7 @@ function switchMap(num) {
                 mapChart.showLoading();
 
                 $.ajax({
-                    url: 'http://localhost/apidemo.php',
+                    url: 'https://api.superdog.tech:8190/api/covid19/citydata',
                     dataType: 'json',
                     success: function (data) {
                         var mapData = [];
@@ -199,7 +199,7 @@ function switchMap(num) {
                 mapChart.showLoading();
 
                 $.ajax({
-                    url: 'http://localhost/apidemo.php',
+                    url: 'https://api.superdog.tech:8190/api/covid19/citydata',
                     dataType: 'json',
                     success: function (data) {
                         var mapData = [];
@@ -245,10 +245,10 @@ var vue = new Vue({
     methods: {
     },
     created: function () {
-        axios.get('http://localhost/apidemo.php').then(response => {
+        axios.get('https://api.superdog.tech:8190/api/covid19/citydata').then(response => {
             this.cityData = response.data.data;
         });
-        axios.get('http://localhost/apidemo1.php').then(response => {
+        axios.get('https://api.superdog.tech:8190/api/covid19/totaldata').then(response => {
             this.totalData = response.data.data[0];
         });
     }

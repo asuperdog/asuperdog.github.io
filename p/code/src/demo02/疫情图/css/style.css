@@ -53,3 +53,29 @@
 .yq-table .thead td {
     color: white;
 }
+
+/* 颜色方块 */
+/* 确诊 */
+.qz {
+    color: #e4583d;
+}
+
+/* 疑似 */
+.ys {
+    color: #e99244;
+}
+
+/* 境外 */
+.jw {
+    color: #ebcb4e;
+}
+
+/* 治愈 */
+.zy {
+    color: #59b3a3;
+}
+
+/* 死亡 */
+.sw {
+    color: #606f8f;
+}
