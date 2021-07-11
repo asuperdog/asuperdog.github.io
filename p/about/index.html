@@ -25,22 +25,25 @@
 					<img src="//cdn.jsdelivr.net/gh/asuperdog/myrepo@master/myPhoto.jpg" class="card-img-top" alt="myPhoto.jpg">
 					<div class="card-body">
 						<h5 class="card-title">个人信息</h5>
-						<p>小宇 / 男 / 2000.</p>
-						<p>坐标 : Guangdong.</p>
-						<p>在读 : 大二 / 软件专业.</p>
+						<p>小宇 | 男 | 2000.</p>
+						<p>坐标 : 广东 | 深圳.</p>
+						<p>在读 : 大二 | 软件专业.</p>
 						<p>人生最大的愿望是世界和平.</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-8 col-sm-12">
+				<div class="d-md-none">
+					<div class="mt-3"></div>
+				</div>
 				<div class="card">
 					<div class="card-body">
 						<div>
 							<h5 class="card-title">你好呀~</h5>
-							<p>小宇，外号渣狗.</p>
-							<p>一个不会敲代码的小白.</p>
-							<p>喜欢夏天，喜欢看不同的风景.</p>
-							<p>耳机依赖患者，互联网冲浪资深选手.</p>
+							<p>我的名字叫渣狗。</p>
+							<p>一个不会敲代码的小白。</p>
+							<p>喜欢夏天，喜欢看不同的风景。</p>
+							<p>耳机依赖患者，互联网冲浪资深选手。</p>
 						</div><br>
 						<div>
 							<h5>我的标签</h5>
@@ -59,7 +62,7 @@
 						</div><br>
 						<div>
 							<h5>联系方式</h5>
-							<p><a href="#" id="contentUs">公众号 : 渣狗啊喂</a></p>
+							<p><a href="javascript:void(0)" id="contentUs">公众号 : 渣狗啊喂</a></p>
 							<p><a href="mailto:bombiu@126.com">邮箱 : bombiu@126.com</a></p>
 						</div>
 					</div>
@@ -86,19 +89,19 @@
 		$(function () {
 			$("#contentUs").popover({
 				html: true,
-				trigger: 'hover',
+				trigger: 'click',
 				content: "<img src='../../src/img/qrcode.jpg' alt='QRCode'>"
 			});
 		});
 	</script>
 
 	<!-- Valine Plugin -->
-    <script>
-        new Valine({
-            el: '#vcomments',
-            appId: 'E9PfdaH8kni8wwLfvotllMsc-gzGzoHsz',
-            appKey: 'VHGviXWX5ePSik44xqwmHfIg'
-        })
+	<script>
+		new Valine({
+			el: '#vcomments',
+			appId: 'E9PfdaH8kni8wwLfvotllMsc-gzGzoHsz',
+			appKey: 'VHGviXWX5ePSik44xqwmHfIg'
+		})
 	</script>
 
 	<!-- APlayer Plugin -->
