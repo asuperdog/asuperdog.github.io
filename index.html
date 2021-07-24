@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <title>渣狗啊喂</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="src/img/icon.png">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">          
-</head>
-<body>
-<div class="main">
-    <img src="src/img/me.jpg" alt="头像">
-    <h1 class="head">Go Big or Go Home</h1>
-    <nav>
-        <a href="blog">Blog</a>
-        <a href="p/code">Code</a>
-        <a href="p/repo">Repo</a>
-        <a href="p/about">About</a>
-    </nav>
-    <div class="about">
-        <p style="font-size: 14px;">- ABOUT ME -</p>
-        <p>Like Writing Bugs <i class="fa fa-code"></i>,</p>
-        <p>Like Music, Like Singing,</p>
-        <p>I'm Here Waiting For U.</p>
-        <p>Resume <i class="fa fa-hand-o-right"></i> <a href="src/resume.pdf" target="_blank"><i class="fa fa-drivers-license-o"></i></a></p>
-        <p>My Weibo <i class="fa fa-hand-o-right"></i> <a href="https://weibo.com/1923008227" target="_blank"><i class="fa fa-weibo"></i></a></p>
-        <p>My GitHub <i class="fa fa-hand-o-right"></i> <a href="https://github.com/asuperdog" target="_blank"><i class="fa fa-github"></i></a></p>
-    </div>
-    <!-- <a href="https://beian.miit.gov.cn/" target="_blank" class="hidden">粤ICP备19138440号</a> -->
-</div>
-</body>
+	<head>
+		<title>渣狗啊喂</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+		<link rel="apple-touch-icon" href="src/img/icon.png">
+		<link rel="stylesheet" href="src/css/style.css">
+	</head>
+	<body>
+		<div class="main">
+			<img src="src/img/me.jpg" alt="头像" id="avatar" class>
+			<h1 class="head">Go Big or Go Home</h1>
+			<nav>
+				<a href="blog">Blog</a>
+				<a href="p/code">Code</a>
+				<a href="p/navs">Navs</a>
+				<a href="p/about">About</a>
+			</nav>
+			<div class="about">
+				<p style="font-size: 14px;">- ABOUT ME -</p>
+				<p>Like Writing Bugs <i class="fa fa-code"></i>,</p>
+				<p>Like Music, Like Singing,</p>
+				<p>I'm Here Waiting For U.</p>
+				<p>Resume
+					<i class="fa fa-hand-o-right"></i>
+					<a href="src/resume.pdf" target="_blank"><i class="fa fa-drivers-license-o"></i></a>
+				</p>
+				<p>My Weibo
+					<i class="fa fa-hand-o-right"></i>
+					<a href="https://weibo.com/1923008227" target="_blank"><i class="fa fa-weibo"></i></a>
+				</p>
+				<p>My GitHub
+					<i class="fa fa-hand-o-right"></i>
+					<a href="https://github.com/asuperdog" target="_blank"><i class="fa fa-github"></i></a>
+				</p>
+			</div>
+			<!-- <a href="https://beian.miit.gov.cn/" target="_blank" class="hidden">粤ICP备19138440号</a> -->
+			<audio src id="music" type="audio/ogg" />
+		</div>
+		<script src="//cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.slim.min.js"></script>
+		<script>
+			let isPlay = false;
+			let audio = document.getElementById("music");
+			audio.src = "//cdn.jsdelivr.net/gh/asuperdog/myrepo@master/mySong.mp3";
+			$("#avatar").click(function() {
+				$("#avatar").toggleClass("play");
+				switch (isPlay) {
+					case false:
+						audio.play();
+						break;
+					case true:
+						audio.pause();
+						break;
+				}
+				isPlay = !isPlay;
+			});
+		</script>
+	</body>
 </html>
