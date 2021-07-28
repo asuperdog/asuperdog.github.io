@@ -11,12 +11,12 @@
 <body>
 	<div class="container">
 		<nav>
-			<ol class="breadcrumb">
+			<ol class="breadcrumb div-default">
 				<li class="breadcrumb-item"><a href="/">Home</a></li>
 				<li class="breadcrumb-item active">About</li>
 			</ol>
 		</nav>
-		<div class="jumbotron">
+		<div class="jumbotron div-default">
 			<h2>About Me</h2>
 		</div>
 		<div class="row">
@@ -88,7 +88,7 @@
 		$(function () {
 			$("#contentMe").popover({
 				html: true,
-				trigger: 'click',
+				trigger: 'hover',
 				content: "<img src='/static/img/qrcode.jpg' alt='QRCode'>"
 			});
 		});
