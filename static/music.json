@@ -1,0 +1,22 @@
+[
+  {
+  "id": 1,
+  "src": "https://cdn.jsdelivr.net/gh/asuperdog/myrepo@master/01.mp3"
+  },
+  {
+  "id": 2,
+  "src": "https://cdn.jsdelivr.net/gh/asuperdog/myrepo@master/02.mp3"
+  },
+  {
+  "id": 3,
+  "src": "https://cdn.jsdelivr.net/gh/asuperdog/myrepo@master/03.mp3"
+  },
+  {
+  "id": 4,
+  "src": "https://cdn.jsdelivr.net/gh/asuperdog/myrepo@master/04.mp3"
+  },
+  {
+  "id": 5,
+  "src": "https://cdn.jsdelivr.net/gh/asuperdog/myrepo@master/05.mp3"
+  }
+]
