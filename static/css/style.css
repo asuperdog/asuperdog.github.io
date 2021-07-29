@@ -46,6 +46,7 @@ h4 {
   border-radius: 8px;
   border-bottom: 1px hidden #fff;
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  -webkit-box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
 }
 
 /* 内容图片展示调整 */
@@ -58,5 +59,19 @@ article img {
 @media screen and (max-width: 768px) {
   .hide-768 {
     display: none !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body,
+  .card,
+  .div-default {
+    color: #999;
+    background-color: #111;
+  }
+
+  img {
+    filter: grayscale(30%);
   }
 }
