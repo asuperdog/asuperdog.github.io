@@ -71,6 +71,12 @@ article img {
     background-color: #111;
   }
 
+  .card,
+  .div-default {
+    box-shadow: 0 1px 6px rgba(153, 153, 153, 0.66);
+    -webkit-box-shadow: 0 1px 6px rgba(153, 153, 153, 0.66);
+  }
+
   img {
     filter: grayscale(30%);
   }
