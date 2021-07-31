@@ -65,16 +65,18 @@ article img {
 @media (prefers-color-scheme: dark) {
 
   body,
-  .card,
   .div-default {
     color: #999;
     background-color: #111;
   }
 
-  .card,
   .div-default {
     box-shadow: 0 1px 6px rgba(153, 153, 153, 0.66);
     -webkit-box-shadow: 0 1px 6px rgba(153, 153, 153, 0.66);
+  }
+
+  .popup {
+    background-color: rgba(17, 17, 17, 0.8) !important;
   }
 
   img {
