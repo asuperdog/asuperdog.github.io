@@ -49,7 +49,6 @@ h4 {
   -webkit-box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
 }
 
-/* 内容图片展示调整 */
 article img {
   max-width: 100%;
   border-radius: 0.8em;
@@ -74,9 +73,5 @@ article img {
 
   .popup {
     background-color: rgba(17, 17, 17, 0.8) !important;
-  }
-
-  img {
-    filter: grayscale(30%);
   }
 }
