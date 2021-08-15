@@ -39,7 +39,7 @@ h4 {
   border-bottom: 2px solid #dfe1e5;
 }
 
-.div-default {
+.div-default, .vpanel {
   margin: 0 0 15px 0;
   line-height: 20px;
   background-color: #fff;
