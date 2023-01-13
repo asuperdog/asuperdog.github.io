@@ -1,14 +1,15 @@
 // 初始化数据
-var calcProfit = 0.0307 * 90 / 365
-var multiple = 1000
-var minMoney = 10000
-var maxMoney = 300000
-var myBalance = 50000
+var calcProfit = 0.0307 * 90 / 365;
+var multiple = 1000;
+var minMoney = 10000;
+var maxMoney = 300000;
+var myBalance = 50000;
+var myProfit = 0.0;
 
 // 绑定事件
 var leftMaxMoney = document.getElementById("maxMoney");
 var leftBalance = document.getElementById("balance");
-var myProfit = document.getElementById("profit");
+var sumProfit = document.getElementById("profit");
 var percent = parseInt(document.getElementById("percent").innerText);
 var progress = parseInt(document.getElementById("progress").style.width);
 
@@ -42,22 +43,26 @@ function checkAll() {
     alert('已成功购买该产品!')
 
     // 计算收益
-    var sumAmounts = Amounts + Amounts;
-    myProfit.innerText = (calcProfit * Amounts).toFixed(2);
+    myProfit += calcProfit * Amounts;
+    sumProfit.innerText = myProfit.toFixed(2);
 
     // 更新数据
-    leftMaxMoney.innerText = (maxMoney - Amounts).toFixed();
-    leftBalance.innerText = (myBalance - Amounts).toFixed();
-    maxMoney = maxMoney - Amounts;
-    myBalance = myBalance - Amounts;
+    maxMoney -= Amounts;
+    myBalance -= Amounts;
+    leftMaxMoney.innerText = maxMoney.toFixed();
+    leftBalance.innerText = myBalance.toFixed();
 
-    // 改变进度
-    percent += 3;
-    document.getElementById("percent").innerText = percent;
+    // 改变进度值
+    if (progress < 100) {
+      percent += Amounts / 10000;
+      document.getElementById("percent").innerText = percent;
+    }
 
     // 改变进度条
-    progress += 3;
-    document.getElementById("progress").style.width = progress + "%";
+    if (progress < 100) {
+      progress += Amounts / 10000;
+      document.getElementById("progress").style.width = progress + "%";
+    }
 }
 
 // 倒计时功能

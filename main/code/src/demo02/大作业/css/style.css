@@ -101,6 +101,10 @@ body {
     font-weight: bold;
 }
 
+.numUnit {
+    font-size:10px;
+}
+
 #product-wrap {
     border: 1px solid #DEE2E6;
     background-color: white;
@@ -124,7 +128,7 @@ body {
     background-image: url("../img/footerIcons.png");
     background-repeat: no-repeat;
     background-position: -32px -50px;
-    transition: background-position 500ms;
+    transition: background-position 250ms;
 }
 
 .icon-WeChat:hover {
@@ -144,7 +148,7 @@ body {
     background-image: url("../img/footerIcons.png");
     background-repeat: no-repeat;
     background-position: -31px 0;
-    transition: background-position 500ms;
+    transition: background-position 250ms;
 }
 
 .icon-Weibo:hover {
