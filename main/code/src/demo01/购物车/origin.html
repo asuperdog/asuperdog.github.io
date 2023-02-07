@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script>
+        var c=1
+        function dec() {
+            document.getElementById('numBox').value=c
+            c=c-1
+        }
+        function inc() {
+            document.getElementById('numBox').value=c
+            c=c+1
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <img src="img/cart.jpg" width="60px" height="60px">
+            <span>购物车</span>
+        </div>
+        <div class="search">
+            <form action="" method="GET">
+                <span class="searchBox">
+                    <input type="text" name="id" placeholder="自营商品">
+                </span>
+                <span class="searchBtn">
+                    <input type="submit" value="搜索">
+                </span>
+            </form>
+        </div>
+    </div>
+
+    <table border="2" cellspacing="3" cellpadding="4">
+        <tr>
+            <th>商品图片</th>
+            <th>商品名称</th>
+            <th>优惠价</th>
+            <th>数量</th>
+            <th>小计金额</th>
+            <th>税后金额</th>
+            <th>操作</th>
+        </tr>
+        
+        <tr class="item01">
+            <td><img src="img/item01.jpg"></td>
+            <td><a href="https://item.jd.com/1288159.html" target="_blank">富士 instax wide 300 拍立得相机</a></td>
+            <td>￥680</td>
+            <td>
+                <input type="button" value="-" onclick="dec()">
+                <input type="text" size="1" id="numBox">
+                <input type="button" value="+" onclick="inc()">
+            </td>
+            <td><span>￥680</span></td>
+            <td><span>￥800</span></td>
+            <td><a href="#">删 除</a></td>
+        </tr>
+
+        <tr class="item02">
+            <td><img src="img/item02.jpg"></td>
+            <td><a href="https://item.jd.com/100008348538.html" target="_blank">Apple iPad 平板电脑 2019年新款</a></td>
+            <td>￥2650</td>
+            <td>
+                <input type="button" value="-" >
+                <input type="text" size="1" id="numBox" >
+                <input type="button" value="+" >
+            </td>
+            <td><span>￥2650</span></td>
+            <td><span>￥3200</span></td>
+            <td><a href="#">删 除</a></td>
+        </tr>
+
+        <tr class="item03">
+            <td><img src="img/item03.jpg"></td>
+            <td><a href="https://item.jd.com/100008348542.html" target="_blank">Apple iPhone 11 (A2223) 128GB</a></td>
+            <td>￥5258</td>
+            <td>
+                <input type="button" value="-" >
+                <input type="text" size="1" id="numBox">
+                <input type="button" value="+" >
+            </td>
+            <td><span>￥5258</span></td>
+            <td><span>￥6000</span></td>
+            <td><a href="#">删 除</a></td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <div class="total">
+            商品总计：<span>3</span>件&emsp;&ensp;商品总金额：<span>￥8588</span>元&emsp;&ensp;税后金额：<span>￥10000</span>元&emsp;
+            <input class="submitBtn" type="button" value="去结算">
+        </div>
+    </div>
+</body>
+</html>

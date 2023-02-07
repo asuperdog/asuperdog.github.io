@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      .center {
+        top: 50%;
+        width: 350px;
+        position: absolute;
+        text-align: center;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row justify-content-center">
+      <div class="center">
+        <div style="height: 100px">
+          <img src="img/logo.png">
+        </div>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#passLogin">
+              <h6>密码登入</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#phoneLogin">
+              <h6>手机登入</h6>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content border border-top-0 rounded-bottom pb-2 mb-3">
+          <!--密码登录-->
+          <div class="tab-pane fade show active px-3" id="passLogin">
+            <div class="input-group pt-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">用户名</span>
+              </div>
+              <input type="text" class="form-control" placeholder="" id="user">
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">密&emsp;码</span>
+              </div>
+              <input type="password" class="form-control" id="pwd">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary fa fa-eye-slash" id="eyeIcon"></button>
+              </div>
+            </div>
+          </div>
+          <!--手机登录-->
+          <div class="tab-pane fade px-3" id="phoneLogin">
+            <div class="input-group pt-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">手机号</span>
+              </div>
+              <input type="text" maxlength="11" class="form-control" placeholder="">
+            </div>
+            <div class="input-group mt-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">验证码</span>
+              </div>
+              <input type="text" class="form-control" placeholder="">
+              <div class="input-group-append">
+                <button type="button" class="btn btn-outline-secondary" id="getSms">获取</button>
+              </div>
+            </div>
+          </div>
+          <!--按钮-->
+          <div class="mt-3 mb-2">
+            <button type="button" class="btn btn-success mx-1" id="login">
+              <i class="fa fa-check"></i>&nbsp;登录
+            </button>
+            <button type="button" class="btn btn-info mx-1" id="reg">
+              <i class="fa fa-user"></i>&nbsp;注册
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery and JavaScript Bundle with Popper -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      // 切换密码可见性
+      let flag = 0;
+      $('#eyeIcon').click(function() {
+        if (flag === 0) {
+          $('#pwd').attr('type', 'text');
+          $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+          flag = 1;
+        } else {
+          $('#pwd').attr('type', 'password');
+          $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+          flag = 0;
+        }
+      });
+
+      // 短信发送防抖
+      $('#getSms').click(function() {
+        let time = 60;
+        $(this).attr('disabled', 'true');
+        let timer = setInterval(function() {
+          if (time === 0) {
+            clearInterval(timer);
+            $('#getSms').removeAttr('disabled').html('重发');
+          } else {
+            $('#getSms').html('<i class="fa fa-spinner fa-pulse"></i> ' + time);
+            time--;
+          }
+        }, 1000)
+      });
+
+      // 账号判断
+      $('#login').click(function() {
+        let user = $('#user').val();
+        let pwd = $('#pwd').val();
+        if (user === 'admin' && pwd === 'admin') {
+          window.location.href = './index.html';
+        } else {
+          alert('账号: admin  密码: admin');
+        }
+      });
+
+      // 注册跳转
+      $('#reg').click(function() {
+        window.location.href = 'register.html'
+      })
+    </script>
+
+  </body>
+</html>

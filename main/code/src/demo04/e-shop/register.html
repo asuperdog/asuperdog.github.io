@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <title>注册页</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      .center {
+        top: 50%;
+        width: 350px;
+        position: absolute;
+        text-align: center;
+        transform: translateY(-50%);
+      }
+
+      .tips {
+        color: red;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row justify-content-center">
+      <div class="center">
+        <div style="height: 100px">
+          <img src="img/logo.png">
+        </div>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#form">
+              <h6>用户注册</h6>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">
+              <h6>用户登录</h6>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content border border-top-0 rounded-bottom pb-2 mb-3">
+          <!--用户注册-->
+          <form>
+            <div class="tab-pane fade show active px-3" id="form">
+              <div class="input-group pt-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">用户名</span>
+                </div>
+                <input type="text" class="form-control" id="user">
+              </div>
+              <div class="tips"></div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">手机号</span>
+                </div>
+                <input type="text" class="form-control" id="phone">
+              </div>
+              <div class="tips"></div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">密&emsp;码</span>
+                </div>
+                <input type="password" class="form-control pwd" id="pwd1">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-outline-secondary eyeIcon fa fa-eye-slash"></button>
+                </div>
+              </div>
+              <div class="tips"></div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">确认密码</span>
+                </div>
+                <input type="password" class="form-control pwd" id="pwd2">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-outline-secondary eyeIcon fa fa-eye-slash"></button>
+                </div>
+              </div>
+              <div class="tips"></div>
+            </div>
+
+            <!--按钮-->
+            <div class="mb-2">
+              <button type="button" class="btn btn-success mx-1" id="reg">
+                <i class="fa fa-check"></i>&nbsp;注册
+              </button>
+              <button type="reset" class="btn btn-light mx-1">
+                <i class="fa fa-refresh"></i>&nbsp;重置
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery and JavaScript Bundle with Popper -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      // 切换密码可见性
+      let flag = 0;
+      $('.eyeIcon').click(function() {
+        if (flag === 0) {
+          $('.pwd').attr('type', 'text');
+          $('.eyeIcon').removeClass('fa-eye-slash').addClass('fa-eye');
+          flag = 1;
+        } else {
+          $('.pwd').attr('type', 'password');
+          $('.eyeIcon').removeClass('fa-eye').addClass('fa-eye-slash');
+          flag = 0;
+        }
+      });
+
+      // 注册逻辑判断
+      $('#reg').click(function() {
+        let result = isUserOk();
+        result = isPhoneOk() && result;
+        result = isPwd1Ok() && result;
+        result = isPwd2Ok() && result;
+        if (result) {
+          window.location.href = './login.html';
+        }
+        return result;
+      });
+
+      $('#user').on('keyup change', isUserOk);
+
+      function isUserOk() {
+        let reg = /^[a-zA-Z][a-zA-z0-9]{5,7}$/;
+        let user = $('#user');
+        if (reg.test(user.val())) {
+          user.parent().next().text('');
+          return true;
+        } else {
+          user.parent().next().text('请输入6~8个字母、数字，以字母开头');
+          return false;
+        }
+      };
+
+      $('#phone').on('keyup change', isPhoneOk);
+
+      function isPhoneOk() {
+        let reg = /^[1][3,4,5,7,8,9][0-9]{9}$/;
+        let phone = $('#phone');
+        if (reg.test(phone.val())) {
+          phone.parent().next().text('');
+          return true;
+        } else {
+          phone.parent().next().text('请输入正确的手机号');
+          return false;
+        }
+      };
+
+      $('#pwd1').on('keyup change', isPwd1Ok);
+
+      function isPwd1Ok() {
+        let reg = /^\S{8,12}$/;
+        let pwd1 = $('#pwd1');
+        if (reg.test(pwd1.val())) {
+          pwd1.parent().next().text('');
+          return true;
+        } else {
+          pwd1.parent().next().text('请输入8-12个字符');
+          return false;
+        }
+      }
+
+      $('#pwd2').on('keyup change', isPwd2Ok);
+
+      function isPwd2Ok() {
+        let pwd1 = $('#pwd1');
+        let pwd2 = $('#pwd2');
+        if (pwd1.val() === pwd2.val()) {
+          pwd2.parent().next().text('');
+          return true;
+        } else {
+          pwd2.parent().next().text('两次密码不一致');
+          return false;
+        }
+      }
+    </script>
+
+  </body>
+</html>

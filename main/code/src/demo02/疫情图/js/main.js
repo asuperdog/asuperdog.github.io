@@ -1,10 +1,6 @@
 // 初始化echarts示例mapChart
 var mapChart = echarts.init(document.getElementById('map-wrap'));
 
-$(document).ready(function () {
-    $('.btn:eq(0)').addClass('btn-active');
-})
-
 function switchMap(num) {
     $.get('https://geo.datav.aliyun.com/areas_v2/bound/440000_full.json', function (mapJson) {
         echarts.registerMap('440000', mapJson);
@@ -57,32 +53,32 @@ function switchMap(num) {
                 mapChart.showLoading();
 
                 $.ajax({
-                    url: 'https://api.superdog.tech:8190/api/covid19/citydata',
+                    url: '/res/covidDB',
                     dataType: 'json',
                     success: function (data) {
-                        var mapData = [];
+                        let CovidMap = [];
                         mapChart.hideLoading();
 
                         //获取到各个城市的数据
-                        for (var i = 0; i < data.data.length; i++) {
-                            var newJson = {
-                                name: data.data[i].division_name,
-                                value: data.data[i].qzbl_xz
+                        for (let i = 0; i < data.datas.length; i++) {
+                            let newMap = {
+                                name: data.datas[i].city_name,
+                                value: data.datas[i].value_xz
                             }
-                            mapData.push(newJson);
+                            CovidMap.push(newMap);
                         }
 
                         mapChart.setOption({
                             title: {
-                                subtext: '更新时间 : ' + data.data[0].data_date
+                                subtext: '更新时间 : ' + data.update
                             },
                             series: {
-                                data: mapData
+                                data: CovidMap
                             }
                         });
                     },
                     error: function () {
-                        alert("JSON 数据请求失败！");
+                        console.log("JSON 数据请求失败！");
                     }
                 });
             }
@@ -128,27 +124,27 @@ function switchMap(num) {
                 mapChart.showLoading();
 
                 $.ajax({
-                    url: 'https://api.superdog.tech:8190/api/covid19/citydata',
+                    url: '/res/covidDB',
                     dataType: 'json',
                     success: function (data) {
-                        var mapData = [];
+                        let CovidMap = [];
                         mapChart.hideLoading();
 
                         //获取到各个城市的数据
-                        for (var i = 0; i < data.data.length; i++) {
-                            var newJson = {
-                                name: data.data[i].division_name,
-                                value: data.data[i].qzbl_xy
+                        for (let i = 0; i < data.datas.length; i++) {
+                            let newMap = {
+                                name: data.datas[i].city_name,
+                                value: data.datas[i].value_xz
                             }
-                            mapData.push(newJson);
+                            CovidMap.push(newMap);
                         }
 
                         mapChart.setOption({
                             title: {
-                                subtext: '更新时间 : ' + data.data[0].data_date
+                                subtext: '更新时间 : ' + data.update
                             },
                             series: {
-                                data: mapData
+                                data: CovidMap
                             }
                         });
                     },
@@ -199,27 +195,27 @@ function switchMap(num) {
                 mapChart.showLoading();
 
                 $.ajax({
-                    url: 'https://api.superdog.tech:8190/api/covid19/citydata',
+                    url: '/res/covidDB',
                     dataType: 'json',
                     success: function (data) {
-                        var mapData = [];
+                        let CovidMap = [];
                         mapChart.hideLoading();
 
                         //获取到各个城市的数据
-                        for (var i = 0; i < data.data.length; i++) {
-                            var newJson = {
-                                name: data.data[i].division_name,
-                                value: data.data[i].qzbl_lj
+                        for (let i = 0; i < data.datas.length; i++) {
+                            let newMap = {
+                                name: data.datas[i].city_name,
+                                value: data.datas[i].value_lj
                             }
-                            mapData.push(newJson);
+                            CovidMap.push(newMap);
                         }
 
                         mapChart.setOption({
                             title: {
-                                subtext: '更新时间 : ' + data.data[0].data_date
+                                subtext: '更新时间 : ' + data.update
                             },
                             series: {
-                                data: mapData
+                                data: CovidMap
                             }
                         });
                     },
@@ -239,17 +235,17 @@ switchMap(0);
 var vue = new Vue({
     el: '#yq-data',
     data: {
-        cityData:[],
-        totalData: []
+        city_data:[],
+        total_data: []
     },
     methods: {
     },
     created: function () {
-        axios.get('https://api.superdog.tech:8190/api/covid19/citydata').then(response => {
-            this.cityData = response.data.data;
+        axios.get('/res/covidDB').then(res => {
+            this.city_data = res.data.datas;
         });
-        axios.get('https://api.superdog.tech:8190/api/covid19/totaldata').then(response => {
-            this.totalData = response.data.data[0];
+        axios.get('/res/covidDB').then(res => {
+            this.total_data = res.data.datas[0];
         });
     }
 });

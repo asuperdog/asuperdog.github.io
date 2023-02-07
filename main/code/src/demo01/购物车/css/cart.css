@@ -1,0 +1,149 @@
+body {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* --- Header --- */
+.header {
+  width: 1000px;
+  height: 100px;
+}
+
+.title {
+  float: left;
+  display: block;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.title img {
+  vertical-align: middle;
+}
+
+.title span {
+  vertical-align: middle;
+  margin-left: 30px;
+  font-size: 25px;
+  font-family: "Microsoft YaHei";
+}
+
+.search {
+  float: right;
+  margin-top: 25px;
+}
+
+.search span {
+  float: left;
+  display: block;
+}
+
+.searchBox input {
+  width: 200px;
+  height: 24px;
+  padding-left: 5px;
+  outline: none;
+  font-size: 14px;
+  border: 2px #c91623 solid;
+}
+
+.searchBtn input {
+  width: 50px;
+  height: 30px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: #c91623;
+}
+
+/* --- Table --- */
+table {
+  width: 1000px;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  border: 2px solid white;
+  font-family: "Microsoft YaHei";
+}
+
+tr .itemSumPrice {
+  font-weight: bold;
+}
+
+tr.item-checked {
+  background: lightblue;
+}
+
+tr.item:hover {
+  background: lightpink;
+}
+
+td a {
+  text-decoration: none;
+}
+
+td a:link {
+  color: black;
+}
+
+td a:hover {
+  color: red;
+}
+
+.setNum {
+  width: 42px;
+  height: 18px;
+  text-align: center;
+}
+
+/* --- Footer --- */
+.footer {
+  width: 1000px;
+}
+
+.total {
+  float: right;
+  margin-top: 10px;
+  vertical-align: middle;
+  font-family: "Microsoft YaHei";
+}
+
+.total span {
+  color: #e2231a;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #c91623;
+}
+
+.deleteBtn {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-width: 0 0;
+  vertical-align: middle;
+  background-color: #e54346;
+}
+
+.submitBtn {
+  width: 80px;
+  height: 40px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-width: 0 0;
+  vertical-align: middle;
+  background-color: #e54346;
+}

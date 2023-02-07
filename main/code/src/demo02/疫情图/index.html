@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.0/dist/echarts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.13/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mockjs@1.1.0/dist/mock-min.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -17,7 +18,7 @@
         <div id="map-wrap"></div>
         <!-- 切换地图 -->
         <div class="btn-wrap">
-            <a href="javascript:switchMap(0)" class="btn btn-link">新增确诊</a>
+            <a href="javascript:switchMap(0)" class="btn btn-link btn-active">新增确诊</a>
             <a href="javascript:switchMap(1)" class="btn btn-link">现存确诊</a>
             <a href="javascript:switchMap(2)" class="btn btn-link">累计确诊</a>
         </div>
@@ -25,33 +26,33 @@
         <div id="yq-data">
             <div class="total-data">
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span class="qz">{{totalData.xcqz_xz}}</span></div>
-                    <div><span class="md-num qz">{{totalData.xcqz}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="qz">{{total_data.last_xc}}</span></div>
+                    <div><span class="md-num qz">{{total_data.value_xc}}</span></div>
                     <div><span class="btm-text">现存确诊</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span class="ys">{{totalData.xcys_xz}}</span></div>
-                    <div><span class="md-num ys">{{totalData.xcys}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="ys">{{total_data.last_ys}}</span></div>
+                    <div><span class="md-num ys">{{total_data.value_ys}}</span></div>
                     <div><span class="btm-text">现有疑似</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span class="jw">{{totalData.jwsr_xz}}</span></div>
-                    <div><span class="md-num jw">{{totalData.jwsr_lj}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="jw">{{total_data.last_jw}}</span></div>
+                    <div><span class="md-num jw">{{total_data.value_jw}}</span></div>
                     <div><span class="btm-text">境外输入</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span class="qz">{{totalData.ljqz_xz}}</span></div>
-                    <div><span class="md-num qz">{{totalData.ljqz}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="qz">{{total_data.last_qz}}</span></div>
+                    <div><span class="md-num qz">{{total_data.value_qz}}</span></div>
                     <div><span class="btm-text">累计确诊</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span class="zy">{{totalData.ljzy_xz}}</span></div>
-                    <div><span class="md-num zy">{{totalData.ljzy}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="zy">{{total_data.last_zy}}</span></div>
+                    <div><span class="md-num zy">{{total_data.value_zy}}</span></div>
                     <div><span class="btm-text">累计治愈</span></div>
                 </div>
                 <div class="box">
-                    <div><span class="sm-num">较昨日&nbsp;<span class="sw">{{totalData.ljsw_xz}}</span></div>
-                    <div><span class="md-num sw">{{totalData.ljsw}}</span></div>
+                    <div><span class="sm-num">较昨日&nbsp;<span class="sw">{{total_data.last_sw}}</span></div>
+                    <div><span class="md-num sw">{{total_data.value_sw}}</span></div>
                     <div><span class="btm-text">累计死亡</span></div>
                 </div>
             </div>
@@ -67,19 +68,20 @@
                         <td style="background-color: #59b3a3">治愈</td>
                         <td style="background-color: #606f8f">死亡</td>
                     </tr>
-                    <tr v-for="(data, i) in cityData">
-                        <td>{{data.division_name}}</td>
-                        <td>{{data.qzbl_xy}}</td>
-                        <td>{{data.ysbl_xy}}</td>
-                        <td>{{data.jwsr_lj}}</td>
-                        <td>{{data.qzbl_lj}}</td>
-                        <td>{{data.zycybl_lj}}</td>
-                        <td>{{data.sw_lj}}</td>
+                    <tr v-for="(data, i) in city_data">
+                        <td>{{data.city_name}}</td>
+                        <td>{{data.value_xz}}</td>
+                        <td>{{data.value_xc}}</td>
+                        <td>{{data.value_lj}}</td>
+                        <td>{{data.value_xz}}</td>
+                        <td>{{data.value_xc}}</td>
+                        <td>{{data.value_lj}}</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
 </body>
+<script src="js/dataFromMock.js"></script>
 <script src="js/main.js"></script>
 </html>

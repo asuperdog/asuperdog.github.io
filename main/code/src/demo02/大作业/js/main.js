@@ -2,7 +2,7 @@
 var calcProfit = 0.0307 * 90 / 365;
 var multiple = 1000;
 var minMoney = 10000;
-var maxMoney = 300000;
+var maxMoney = 100000;
 var myBalance = 50000;
 var myProfit = 0.0;
 
@@ -54,13 +54,13 @@ function checkAll() {
 
     // 改变进度值
     if (progress < 100) {
-      percent += Amounts / 10000;
+      percent += Amounts / 5000;
       document.getElementById("percent").innerText = percent;
     }
 
     // 改变进度条
     if (progress < 100) {
-      progress += Amounts / 10000;
+      progress += Amounts / 5000;
       document.getElementById("progress").style.width = progress + "%";
     }
 }
