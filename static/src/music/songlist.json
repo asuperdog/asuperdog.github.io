@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "You're Beautiful",
+    "src": "static/src/music/01.mp3"
+  },
+  {
+    "id": 2,
+    "name": "Believe",
+    "src": "static/src/music/02.m4a"
+  },
+  {
+    "id": 3,
+    "name": "A Million Dreams",
+    "src": "static/src/music/03.mp3"
+  },
+  {
+    "id": 4,
+    "name": "Fix You",
+    "src": "static/src/music/04.m4a"
+  },
+  {
+    "id": 5,
+    "name": "If I Ain't Got You",
+    "src": "static/src/music/05.m4a"
+  }
+]
